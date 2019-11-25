@@ -34,7 +34,7 @@
            aria-expanded="false">비밀번호찾기<span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li class="active"><a href="login.jsp">로그인</a></li>
-          <li class="active"><a href="pwfind.jsp">비밀번호찾기</a></li>
+          <li class="active"><a href="join.jsp">비밀번호찾기</a></li>
           <!-- <li><a href="pwfind.jsp">비밀번호찾기</a></li> -->
         </ul>
       </li>

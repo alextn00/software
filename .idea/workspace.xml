@@ -2,13 +2,23 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="webSoftware:war exploded" />
+      <artifact name="webSoftware:war" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5413a6ef-df38-45e5-ac61-53c67da63b2a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/web/join.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/joinAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/WEB-INF/classes/user/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/WEB-INF/classes/user/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/WEB-INF/classes/user/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/WEB-INF/classes/user/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/webSoftware/user/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webSoftware/user/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/webSoftware/user/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webSoftware/user/UserDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,9 +44,14 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tnawl\IdeaProjects\webSoftware\web" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -50,7 +65,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.join.jsp">
+  <component name="RunManager" selected="Tomcat Server.index.jsp">
     <configuration name="join.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8000/services/join.jsp">
       <method v="2" />
     </configuration>
@@ -227,7 +242,7 @@
       <workItem from="1574672353713" duration="634000" />
       <workItem from="1574673189507" duration="440000" />
       <workItem from="1574674138084" duration="9689000" />
-      <workItem from="1574694310323" duration="633000" />
+      <workItem from="1574694310323" duration="3184000" />
     </task>
     <task id="LOCAL-00001" summary="1125ver2">
       <created>1574689557681</created>
@@ -236,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574689557681</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1125ver2">
+      <created>1574694972567</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1574694972567</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

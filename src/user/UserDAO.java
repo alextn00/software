@@ -14,7 +14,7 @@ public class UserDAO {
     public UserDAO() { // 생성자 실행될때마다 자동으로 db연결이 이루어 질 수 있도록함
         try {
             String dbURL = "jdbc:mysql://localhost:3306/BBS?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"; // localhost:3306 포트는 컴퓨터설치된 mysql주소
-            String dbID = "root";
+            String dbID = "software";
             String dbPassword = "thvmxmdnpdj";
             Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection(dbURL, dbID, dbPassword);
@@ -47,4 +47,19 @@ public class UserDAO {
         }
         return -2; // 데이터베이스 오류를 의미
     }
+    public int join(User user) {
+        String SQL = "INSERT INTO USER VALUES (?,?,?,?)";
+        try {
+            pstmt = conn.prepareStatement(SQL);
+            pstmt.setString(1, user.getUserID());
+            pstmt.setString(2, user.getUserPassword());
+            pstmt.setString(3, user.getUserName());
+            pstmt.setString(4, user.getUserEmail());
+            return pstmt.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return -1; // DB 오류
+    }
 }
+
