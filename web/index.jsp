@@ -15,30 +15,18 @@
 <nav class="navbar navbar-default">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle collapsed"
-            data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-            aria-expaned="false">
+            data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expaned="false">
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand">학생경력정보시스템</a>
+      <a class="navbar-brand">학생경력관리시스템</a>
   </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
             <!-- Link 메뉴 -->
-            <li><a href="pwfind.jsp">비밀번호찾기</a></li>
+
             <!-- DropDown 형식의 메뉴 -->
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle"
-                   data-toggle="dropdown" role="button" aria-haspopup="true"
-                   aria-expanded="false">메뉴<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="index.jsp">로그인</a></li>
-                    <li><a href="pwfind.jsp">비밀번호찾기</a></li>
-                </ul>
-            </li>
         </ul>
     </div>
   </div>
@@ -52,7 +40,7 @@
     <div class="jumbotron" style="padding-top: 20px;">
       <!-- 로그인 정보를 숨기면서 전송post -->
       <form method="post" action="loginAction.jsp">
-        <h3 style="text-align: center;"> 학생경력정보시스템 </h3>
+        <h3 style="text-align: center;"> 학생경력관리시스템 </h3>
 
         <div class="form-group">
           <input type="text" class="form-control" placeholder="학번" name="userID" maxlength="20">
@@ -60,9 +48,13 @@
         <div class="form-group">
           <input type="password" class="form-control" placeholder="비밀번호" name="userPassword" maxlength="20">
         </div>
-        <input type="submit" class="btn btn-primary form-control" value="로그인">
+       <!-- <input type="submit" class="btn btn-primary form-control" value="로그인"> -->
+          <div class = "modal-footer">
+              <button type = "submit" class = "btn btn-primary" onclick = "pwfind.jsp"> 비밀번호 찾기 </button>
+              <button type = "submit" class = "btn btn-primary" onclick = "loginAction.jsp"> 로그인</button>
+          </div>
 
-기본비밀번호는 생년월일입니다.
+초기비밀번호는 생년월일입니다.
 
       </form>
     </div>

@@ -38,6 +38,7 @@
 					data-toggle="dropdown" role="button" aria-haspopup="true"
 					aria-expanded="false">메뉴<span class="caret"></span></a>
 				 <ul class="dropdown-menu">
+					 <li><a href="course_check.jsp">교과 정보 확인</a></li>
 					 <li><a href="course_add.jsp">교과 정보 수정</a></li>
 					 <li><a href="noncourse_check.jsp">비교과 정보 확인</a></li>
 					 <li><a href="noncourse_modify.jsp">비교과 정보 수정</a></li>
