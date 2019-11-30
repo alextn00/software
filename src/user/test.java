@@ -1,29 +1,29 @@
 package user;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-public class UserDAO {
-    private XSSFWorkbook workbook;
-    public UserDAO() throws IOException {
 
-    }
-    // 로그인을 시도하는 함수****
-    public int login(String userID, String userPassword) throws IOException {
+public class test {
 
-       FileInputStream file = new FileInputStream("/volume1/Tomcat/1130ver12/excelLoginFile.xlsx");
-        workbook = new XSSFWorkbook(file);
-        int cnt1 = 0;
-        int cnt2 = 0;
-        int rowindex=0;
-        int columnindex=0;
+    public static void main(String[] args) {
+
         try {
+            FileInputStream file = new FileInputStream("./excelLoginFile.xlsx");
+            XSSFWorkbook workbook = new XSSFWorkbook(file);
+            String userID = "2017116848";
+            String userPassword = "684822";
+            int rowindex=0;
+            int cnt1=0;
+            int cnt2=0;
+            int columnindex=0;
+            //시트 수 (첫번째에만 존재하므로 0을 준다)
+            //만약 각 시트를 읽기위해서는 FOR문을 한번더 돌려준다
             XSSFSheet sheet=workbook.getSheetAt(0);
+            //행의 수
             int rows=sheet.getPhysicalNumberOfRows();
             for(rowindex=0;rowindex<rows;rowindex++){
                 //행을읽는다
@@ -80,15 +80,14 @@ public class UserDAO {
                 }
             }
             if(cnt1==0 && cnt2 == 0)
-                return -1; //no ID
+                System.out.println("아이디 틀림");
             else if(cnt1!=0 &&cnt2==0)
-                return 0; // ID correct, password wrong
+                System.out.println("비밀번호 틀림");
             else
-                return 1; //login success
-        } catch (Exception e) {
+                System.out.println("로그인 성공!");
+        }catch(Exception e) {
             e.printStackTrace();
         }
-        return -2; // error
+
     }
 }
-

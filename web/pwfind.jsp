@@ -20,7 +20,7 @@
             <span class="icon-bar"></span> <span class="icon-bar"></span> <span
                 class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="main.jsp">학생경력정보시스템</a>
+        <a class="navbar-brand" href="index.jsp">학생경력정보시스템</a>
     </div>
     <div class="collapse navbar-collapse"
          id="#bs-example-navbar-collapse-1">
@@ -29,9 +29,10 @@
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown"><a href="#" class="dropdown-toggle"
                                     data-toggle="dropdown" role="button" aria-haspopup="true"
-                                    aria-expanded="false">접속하기<span class="caret"></span></a>
+                                    aria-expanded="false">메뉴<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li class="active"><a href="login.jsp">로그인</a></li>
+                    <li><a href="index.jsp">로그인</a></li>
+                    <li><a href="pwfind.jsp">비밀번호찾기</a></li>
                 </ul></li>
         </ul>
     </div>
