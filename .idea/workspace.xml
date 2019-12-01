@@ -6,38 +6,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5413a6ef-df38-45e5-ac61-53c67da63b2a" name="Default Changelist" comment="1130 final">
-      <change afterPath="$PROJECT_DIR$/excelLoginFile.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jackson-databind-2.10.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/json-simple-1.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/user/test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/charttest.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/course_add.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/course_check.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/graduation_criteria.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/logout.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/noncourse_check.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/noncourse_modify.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/password_find.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/personal_check.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/personal_modify.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/tt.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/web.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/JAX_WS_Apache_Axis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/JAX_WS_Apache_Axis.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="5413a6ef-df38-45e5-ac61-53c67da63b2a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/webSoftware_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/WEB-INF/classes/user/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/WEB-INF/classes/user/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/WEB-INF/classes/user/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/WEB-INF/classes/user/UserDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/loginAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/loginAction.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/webSoftware/META-INF/webSoftware.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/webSoftware/user/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webSoftware/user/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/webSoftware/user/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webSoftware/user/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/user/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/loginAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/loginAction.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pwfind.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/pwfind.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webSoftware.iml" beforeDir="false" afterPath="$PROJECT_DIR$/webSoftware.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -398,7 +371,7 @@
       <workItem from="1575042887979" duration="4128000" />
       <workItem from="1575077648723" duration="10195000" />
       <workItem from="1575094682612" duration="8200000" />
-      <workItem from="1575112316422" duration="6811000" />
+      <workItem from="1575112316422" duration="9882000" />
     </task>
     <task id="LOCAL-00001" summary="1125ver2">
       <created>1574689557681</created>
@@ -421,7 +394,21 @@
       <option name="project" value="LOCAL" />
       <updated>1575125664574</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="1130 ver.31">
+      <created>1575125941653</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1575125941653</updated>
+    </task>
+    <task id="LOCAL-00005" summary="1130 ver.31">
+      <created>1575128838464</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1575128838464</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,6 +431,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="1125ver2" />
     <MESSAGE value="1130 final" />
-    <option name="LAST_COMMIT_MESSAGE" value="1130 final" />
+    <MESSAGE value="1130 ver.31" />
+    <option name="LAST_COMMIT_MESSAGE" value="1130 ver.31" />
   </component>
 </project>
