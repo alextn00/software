@@ -1,13 +1,13 @@
-package curriculum_career;
+package src.curriculum_career;
 
-import Data.data_curriculum;
-import Data.graduation_requirement;
+import src.Data.data_curriculum;
+import src.Data.graduation_requirement;
 import org.apache.commons.collections4.ListUtils;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import student.Student;
+import src.student.Student;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

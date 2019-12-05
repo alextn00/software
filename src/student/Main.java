@@ -1,8 +1,8 @@
-package student;
+package src.student;
 
-import student.Student;
-import carrer.nonSubject.*;
-import Data.*;
+import src.student.Student;
+import src.carrer.nonSubject.*;
+import src.Data.*;
 
 import java.io.IOException;
 import java.util.Arrays;
