@@ -1,0 +1,29 @@
+<component name="libraryTable">
+  <library name="JAX-WS-Apache Axis" type="JAX-WS">
+    <properties version="Apache Axis" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/axis.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-collections4-4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-compress-1.19.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-discovery-0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-logging-1.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/curvesapi-1.06.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jaxrpc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-1.2.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/poi-4.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/poi-examples-4.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/poi-excelant-4.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/poi-ooxml-4.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/poi-ooxml-schemas-4.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/poi-scratchpad-4.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/saaj.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/wsdl4j-1.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/xmlbeans-3.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/json-simple-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-databind-2.10.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

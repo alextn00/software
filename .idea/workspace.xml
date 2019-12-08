@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="webSoftware:war" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5413a6ef-df38-45e5-ac61-53c67da63b2a" name="Default Changelist" comment="1130 ver.31">
+      <change afterPath="$PROJECT_DIR$/out/artifacts/1127ver3_jar/webSoftware.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver10.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver11.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver12.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver13.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver14.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver15.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver16.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver17.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver18.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver19.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver20.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver21.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver22.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver23.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver24.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver25.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver26.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver27.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver28.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver29.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver30.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver31.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver6.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver7.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver8.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver9.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1201ver1.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1201ver2.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1201ver3.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1201ver4.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1201ver5.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/webSoftware_war - 복사본 (2).war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/webSoftware_war - 복사본.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/webSoftware_war.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/WEB-INF/classes/user/UserDAO$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/WEB-INF/classes/user/test$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/WEB-INF/classes/user/test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/charttest.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/course_add.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/course_check.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/graduation_criteria.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/join.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/joinAction.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/logout.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/noncourse_check.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/noncourse_modify.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/password_find.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/personal_check.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/personal_modify.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/pwfind.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/summary.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/tt.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/web.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/webSoftware/user/UserDAO$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/webSoftware/user/test$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/webSoftware/user/test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poi lib/commons-collections4-4.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poi lib/commons-compress-1.19.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poi lib/curvesapi-1.06.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poi lib/poi-4.1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poi lib/poi-examples-4.1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poi lib/poi-excelant-4.1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poi lib/poi-ooxml-4.1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poi lib/poi-ooxml-schemas-4.1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poi lib/poi-scratchpad-4.1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/poi lib/xmlbeans-3.1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/course_check.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/course_check.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/noncourse_check.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/noncourse_check.jsp" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1U6ICgNuyaHlBKfYjPDgHLCMeOC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="dd" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tnawl\IdeaProjects\dd\web" />
+      <recent name="C:\Users\tnawl\IdeaProjects\dd\web\WEB-INF" />
+      <recent name="C:\Users\tnawl\IdeaProjects\webSoftware\web" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.jsp">
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="user.test" />
+      <module name="webSoftware" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="index.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8000/services/index.jsp">
+      <method v="2" />
+    </configuration>
+    <configuration name="join.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8000/services/join.jsp">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.96" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="webSoftware:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_webSoftware" />
+        <option name="HTTP_PORT" value="8000" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="1465" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="webSoftware:war exploded" />
+          <artifact name="webSoftware:war" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="course_check.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 7.0.96" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/course_check.jsp" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="webSoftware:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_webSoftware" />
+        <option name="HTTP_PORT" value="8000" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="1465" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="webSoftware:war exploded" />
+          <artifact name="webSoftware:war" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="index.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 7.0.96" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8000/index.jsp" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="webSoftware:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_webSoftware" />
+        <option name="HTTP_PORT" value="8000" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="1465" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="webSoftware:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.test" />
+      <item itemvalue="JavaScript Debug.join.jsp" />
+      <item itemvalue="JavaScript Debug.index.jsp" />
+      <item itemvalue="Tomcat Server.index.jsp" />
+      <item itemvalue="Tomcat Server.course_check.jsp" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.jsp" />
+        <item itemvalue="Tomcat Server.course_check.jsp" />
+        <item itemvalue="Application.test" />
+        <item itemvalue="Tomcat Server.index.jsp" />
+        <item itemvalue="JavaScript Debug.join.jsp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5413a6ef-df38-45e5-ac61-53c67da63b2a" name="Default Changelist" comment="" />
+      <created>1574670491410</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574670491410</updated>
+      <workItem from="1574670492913" duration="316000" />
+      <workItem from="1574672353713" duration="634000" />
+      <workItem from="1574673189507" duration="440000" />
+      <workItem from="1574674138084" duration="9689000" />
+      <workItem from="1574694310323" duration="3184000" />
+      <workItem from="1574785135377" duration="1321000" />
+      <workItem from="1574837549204" duration="7309000" />
+      <workItem from="1574865697761" duration="193000" />
+      <workItem from="1574906657358" duration="2480000" />
+      <workItem from="1574927017692" duration="1991000" />
+      <workItem from="1574934653544" duration="696000" />
+      <workItem from="1575010596148" duration="1256000" />
+      <workItem from="1575042887979" duration="4128000" />
+      <workItem from="1575077648723" duration="10195000" />
+      <workItem from="1575094682612" duration="8200000" />
+      <workItem from="1575112316422" duration="9882000" />
+      <workItem from="1575179600137" duration="1904000" />
+      <workItem from="1575546027691" duration="394000" />
+      <workItem from="1575776942245" duration="296000" />
+    </task>
+    <task id="LOCAL-00001" summary="1125ver2">
+      <created>1574689557681</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1574689557681</updated>
+    </task>
+    <task id="LOCAL-00002" summary="1125ver2">
+      <created>1574694972567</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1574694972567</updated>
+    </task>
+    <task id="LOCAL-00003" summary="1130 final">
+      <created>1575125664574</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1575125664574</updated>
+    </task>
+    <task id="LOCAL-00004" summary="1130 ver.31">
+      <created>1575125941653</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1575125941653</updated>
+    </task>
+    <task id="LOCAL-00005" summary="1130 ver.31">
+      <created>1575128838464</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1575128838464</updated>
+    </task>
+    <task id="LOCAL-00006" summary="1130 ver.31">
+      <created>1575179744863</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1575179744864</updated>
+    </task>
+    <task id="LOCAL-00007" summary="1201">
+      <created>1575179908374</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1575179908374</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="1125ver2" />
+    <MESSAGE value="1130 final" />
+    <MESSAGE value="1130 ver.31" />
+    <MESSAGE value="1201" />
+    <option name="LAST_COMMIT_MESSAGE" value="1201" />
+  </component>
+</project>
