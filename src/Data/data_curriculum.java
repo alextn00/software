@@ -1,4 +1,4 @@
-package src.Data;
+package Data;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -11,9 +11,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.function.DoubleToLongFunction;
+//import java.util.function.DoubleToLongFunction;
 
-import src.student.*;
+import student.Student;
 
 public class data_curriculum {
     Scanner keyboard = new Scanner(System.in);

@@ -7,76 +7,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5413a6ef-df38-45e5-ac61-53c67da63b2a" name="Default Changelist" comment="1130 ver.31">
-      <change afterPath="$PROJECT_DIR$/out/artifacts/1127ver3_jar/webSoftware.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver10.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver11.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver12.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver13.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver14.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver15.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver16.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver17.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver18.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver19.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver20.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver21.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver22.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver23.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver24.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver25.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver26.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver27.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver28.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver29.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver30.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver31.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver6.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver7.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver8.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver9.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1201ver1.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1201ver2.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1201ver3.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1201ver4.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1201ver5.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/webSoftware_war - 복사본 (2).war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/webSoftware_war - 복사본.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war/webSoftware_war.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/WEB-INF/classes/user/UserDAO$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/WEB-INF/classes/user/test$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/WEB-INF/classes/user/test.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/charttest.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/course_add.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/course_check.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/graduation_criteria.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/join.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/joinAction.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/logout.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/noncourse_check.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/noncourse_modify.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/password_find.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/personal_check.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/personal_modify.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/pwfind.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/summary.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/tt.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/web.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/webSoftware/user/UserDAO$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/webSoftware/user/test$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/webSoftware/user/test.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/poi lib/commons-collections4-4.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/poi lib/commons-compress-1.19.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/poi lib/curvesapi-1.06.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/poi lib/poi-4.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/poi lib/poi-examples-4.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/poi lib/poi-excelant-4.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/poi lib/poi-ooxml-4.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/poi lib/poi-ooxml-schemas-4.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/poi lib/poi-scratchpad-4.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/poi lib/xmlbeans-3.1.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/noncourse_modify_action.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/course_check.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/course_check.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/noncourse_check.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/noncourse_check.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Data_nonSubject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Data_nonSubject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/data_curriculum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/data_curriculum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/graduation_requirement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/graduation_requirement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/carrer/nonSubject/authorizedEnglish_score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrer/nonSubject/authorizedEnglish_score.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/carrer/nonSubject/counseling_history.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrer/nonSubject/counseling_history.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/carrer/nonSubject/field_practice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrer/nonSubject/field_practice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/carrer/nonSubject/nonSubjectActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrer/nonSubject/nonSubjectActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/student/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/student/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/loginAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/loginAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/summary.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/summary.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -440,7 +384,11 @@
       <workItem from="1575112316422" duration="9882000" />
       <workItem from="1575179600137" duration="1904000" />
       <workItem from="1575546027691" duration="394000" />
-      <workItem from="1575776942245" duration="946000" />
+      <workItem from="1575776942245" duration="1709000" />
+      <workItem from="1575792827995" duration="1296000" />
+      <workItem from="1576189261046" duration="5000" />
+      <workItem from="1576304135757" duration="1100000" />
+      <workItem from="1576305259864" duration="1610000" />
     </task>
     <task id="LOCAL-00001" summary="1125ver2">
       <created>1574689557681</created>

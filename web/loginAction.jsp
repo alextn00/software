@@ -17,6 +17,7 @@
 <body>
 <%
     try {
+
         UserDAO userDAO = new UserDAO(); //인스턴스생성
         int result = userDAO.login(user.getUserID(), user.getUserPassword());
         PrintWriter outter = response.getWriter();

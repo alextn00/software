@@ -1,11 +1,11 @@
-package src.carrer.nonSubject;
+package carrer.nonSubject;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import src.Data.Data_nonSubject;
+import Data.Data_nonSubject;
 
 import java.io.*;
 

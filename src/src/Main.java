@@ -1,9 +1,9 @@
 package src;
 
-import src.student.Student;
-import src.carrer.nonSubject.*;
-import src.Data.*;
-import src.curriculum_career.*;
+import student.Student;
+import carrer.nonSubject.*;
+import Data.*;
+import curriculum_career.student_career ;
 import java.io.IOException;
 import java.util.Arrays;
 

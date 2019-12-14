@@ -1,6 +1,6 @@
-package src.Data;
+package Data;
 
-import src.student.*;
+import student.Student;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;

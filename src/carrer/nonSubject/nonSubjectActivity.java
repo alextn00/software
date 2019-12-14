@@ -1,6 +1,6 @@
-package src.carrer.nonSubject;
+package carrer.nonSubject;
 
-import src.student.*;
+import student.Student;
 
 
 public class nonSubjectActivity{
