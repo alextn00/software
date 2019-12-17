@@ -8,7 +8,7 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import student.Student;
-import java.time.LocalDateTime;
+
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -31,11 +31,10 @@ public class student_career {
     double global_capability;
     double startup_capability;
 
-    boolean double_up = false;//재이수
     int credit;//학점
     private static student_career sc;
     Student st=Student.getInstance();
-          //  Student user = Student.getInstance();
+    //  Student user = Student.getInstance();
     String subject_name; //과목명
 
     public boolean isGraduation_check() {
@@ -69,7 +68,7 @@ public class student_career {
             sc = new student_career();
         return sc;
     }
-    public void Curriculum_Career_input(String email, String name)//교과 경력 입력
+    public void Curriculum_Career_input()//교과 경력 입력
     {
 
         subject_name = keyboard.nextLine(); //과목명
@@ -77,7 +76,7 @@ public class student_career {
         grade = keyboard.nextLine();//성적
         try {
             Student stu = new Student();
-            FileInputStream file = new FileInputStream("/volume1/Tomcat/학생경력정보.xlsx");
+            FileInputStream file = new FileInputStream("학생경력정보.xlsx");
             XSSFWorkbook workbook = new XSSFWorkbook(file);
 
             XSSFSheet sheet = workbook.getSheetAt(0);     // sheet index
@@ -115,7 +114,7 @@ public class student_career {
             file.close();
             data.setter();
             try {
-                FileOutputStream fileoutputstream = new FileOutputStream("/volume1/Tomcat/학생경력정보.xlsx");
+                FileOutputStream fileoutputstream = new FileOutputStream("학생경력정보.xlsx");
                 workbook.write(fileoutputstream);
                 fileoutputstream.close();
                 System.out.println("엑셀파일생성성공");
@@ -130,100 +129,12 @@ public class student_career {
 
     }
 
-    public void Curriculum_Career_inquiry()//교과 경력 조회
-    {
-        if (track.equals("심화퓨터전공")) {
-            System.out.println(data.getAll_creadit());
-            System.out.println(data.getRefinement_credit());
-            System.out.println(data.getBase_refinement_credit());
-            System.out.println(data.getMajorbase_credit());
-            System.out.println(data.getMajor_credit());
-            for(int i=0;i<data.getSubject_name().length;i++)
-            {
-                System.out.println(data.getSubject_name()[i]);
-                System.out.println(data.getCredit()[i]);
-                System.out.println(data.getCurriculum_classification()[i]);
-            }
-        } else if (track.equals("다중전공트랙")) {
-            if (all_creadit >= 130) {
 
-            }
-            if (refinement_credit >= 24) {
-
-            }
-            if (major_credit >= 51) {
-
-            }
-            if (global_capability >= 9) {
-
-            }
-            if (startup_capability >= 9) {
-
-            }
-            //if(){} //필수전공 체크
-        } else if (track.equals("해외복수학위트랙")) {
-            if (all_creadit >= 130) {
-
-            }
-            if (refinement_credit >= 24) {
-
-            }
-            if (major_credit >= 51) {
-
-            }
-            if (global_capability >= 36)//글로벌역량 (복수학위 년수)
-            {
-
-            }
-            if (startup_capability >= 3) {
-
-            }
-            //if(){} //필수전공 체크
-        } else if (track.equals("학석사연계트랙")) {
-            if (all_creadit >= 130) {
-
-            }
-            if (refinement_credit >= 24) {
-
-            }
-            if (major_credit >= 51) {
-
-            }
-            if (global_capability >= 6)//글로벌역량
-            {
-
-            }
-            //if(){} //필수전공 체크
-        } else if (track.equals("융합전공")) {
-            if (all_creadit >= 36) {
-
-            }
-        } else if (track.equals("복수전공")) {
-            if (all_creadit >= 65) {
-
-            }
-        } else if (track.equals("부전공")) {
-            if (all_creadit >= 21) {
-
-            }
-        } else if (track.equals("외국인복수전공")) {
-            if (all_creadit >= 38) {
-
-            }
-        } else if (track.equals("외국인교환학생")) {
-            if (all_creadit >= 21) {
-
-            }
-        }
-
-
-    }
-
-    public void Curriculum_Career_Modify() //교과 경력 수정
+    public void Curriculum_Career_Modify()//교과 경력 수정,과목명을 입력받으면 학점을 고치게함
     {
         try {
             Student stu = new Student();
-            FileInputStream file = new FileInputStream("/volume1/Tomcat/졸업요건.xlsx");
+            FileInputStream file = new FileInputStream("졸업요건.xlsx");
             XSSFWorkbook workbook = new XSSFWorkbook(file);
 
             XSSFSheet sheet = workbook.getSheetAt(0);     // sheet index
@@ -256,7 +167,7 @@ public class student_career {
             data.setter();
 
             try {
-                FileOutputStream fileoutputstream = new FileOutputStream("/volume1/Tomcat/졸업요건.xlsx");
+                FileOutputStream fileoutputstream = new FileOutputStream("졸업요건.xlsx");
                 workbook.write(fileoutputstream);
                 fileoutputstream.close();
                 System.out.println("엑셀파일생성성공");
@@ -275,7 +186,7 @@ public class student_career {
         Student stu = new Student();
 
         try {
-            FileInputStream file = new FileInputStream("/volume1/Tomcat/학생경력정보.xlsx");
+            FileInputStream file = new FileInputStream("C:\\Users\\leehandsub\\Desktop\\학생경력정보.xlsx");
             XSSFWorkbook workbook = new XSSFWorkbook(file);
 
             XSSFSheet sheet = workbook.getSheetAt(0);     // sheet index
@@ -362,7 +273,7 @@ public class student_career {
             file.close();
 
             try {
-                FileOutputStream fileoutputstream = new FileOutputStream("/volume1/Tomcat/학생경력정보.xlsx");
+                FileOutputStream fileoutputstream = new FileOutputStream("C:\\Users\\leehandsub\\Desktop\\학생경력정보.xlsx");
                 workbook.write(fileoutputstream);
                 fileoutputstream.close();
                 System.out.println("엑셀파일생성성공");
@@ -433,7 +344,6 @@ public class student_career {
             }
 
             /* 졸업요건 충족 확인용
-
             System.out.println(all_creadit_pass);
             System.out.println(base_refinement_credit_pass);
             System.out.println(majorbase_credit_pass);
@@ -559,74 +469,8 @@ public class student_career {
                 graduation_check = true;
             }
         }
-
-
-
     }
-    /* public void State_update()//상태 업데이트
-     {
-         try {
-             FileInputStream fis = new FileInputStream("C:\\Users\\leehandsub\\Desktop\\학생경력정보.xlsx");
-             HSSFWorkbook workbook = new HSSFWorkbook(fis);
-             HSSFSheet sheet = workbook.getSheetAt(0); // 해당 엑셀파일의 시트(Sheet) 수
-             int rows = sheet.getPhysicalNumberOfRows(); // 해당 시트의 행의 개수
-             for (int rowIndex = 1; rowIndex < rows; rowIndex++) {
-                 HSSFRow row = sheet.getRow(rowIndex); // 각 행을 읽어온다
-                 if(row!=null)
-                 {
-                     HSSFCell cell=row.getCell(1);
-                     String value = "";
-                     value = cell.getNumericCellValue() + "";//value에넣기
-                     if(value.equals(num))
-                     {
-                         HSSFCell num_cell=row.getCell(0);//몇번째 시트인지 찾기
-                         value= num_cell.getNumericCellValue()+"";
-                         HSSFSheet work_sheet=workbook.getSheetAt(Integer.parseInt(value));//시트 도착
-                         int work_rows = sheet.getPhysicalNumberOfRows(); // 해당 시트의 행의 개수
-                         for (int row_work_Index = 1; row_work_Index < work_rows; row_work_Index++) {
-                             HSSFRow work_row = sheet.getRow(row_work_Index); // 각 행을 읽어온다
-                             if(work_row!=null)
-                             {
 
-                             }
-                         }
-                         break;
-                     }
-                     System.out.println(value);
-                 }
-                 /*if (row != null) {
-                     int cells = row.getPhysicalNumberOfCells();//열의 수
-                     for (int columnIndex = 0; columnIndex <= cells; columnIndex++) {
-                         HSSFCell cell = row.getCell(columnIndex); // 셀에 담겨있는 값을 읽는다.
-                         String value = "";
-                         switch (cell.getCellType()) { // 각 셀에 담겨있는 데이터의 타입을 체크하고 해당 타입에 맞게 가져온다.
-                             case HSSFCell.CELL:
-                                 value = cell.getNumericCellValue() + "";
-                                 break;
-                             case HSSFCell.CELL_TYPE_STRING:
-                                 value = cell.getStringCellValue() + "";
-                                 break;
-                             case HSSFCell.CELL_TYPE_BLANK:
-                                 value = cell.getBooleanCellValue() + "";
-                                 break;
-                             case HSSFCell.CELL_TYPE_ERROR:
-                                 value = cell.getErrorCellValue() + "";
-                                 break;
-                         }
-                         value = cell.getNumericCellValue() + "";//value에넣기
-                         if(value.equals(num))
-                         {
-
-                             break;
-                         }
-                         System.out.println(value);
-                     }
-                 }
-             }
-         } catch (IOException e) {
-             e.printStackTrace();
-         }
-     }*/
     public void setMajor_credit(int major_credit) {
         this.major_credit = major_credit;
     }

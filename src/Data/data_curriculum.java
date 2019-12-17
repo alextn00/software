@@ -6,14 +6,11 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
-//import java.util.function.DoubleToLongFunction;
 
-import student.Student;
+
+import student.*;
 
 public class data_curriculum {
     Scanner keyboard = new Scanner(System.in);
@@ -47,7 +44,7 @@ public class data_curriculum {
     public void setter() {
 
         try {
-            FileInputStream file = new FileInputStream("/volume1/Tomcat/학생경력정보.xlsx");
+            FileInputStream file = new FileInputStream("학생경력정보.xlsx");
             XSSFWorkbook workbook = new XSSFWorkbook(file);
             XSSFSheet work_sheet = workbook.getSheetAt(0);
             int work_value = 0;
