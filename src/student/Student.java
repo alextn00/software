@@ -15,11 +15,10 @@ public class Student { // singleTorn
     private String student_code;
     private String pw;
 
-
     public Student() {
-        this.track = "test";
-        this.student_code = null;
-        this.pw = null;
+        this.track = "";
+        this.student_code = "2017091283";
+        this.pw = "981230";
         setTrack();
     }
 
@@ -42,13 +41,13 @@ public class Student { // singleTorn
     }
 
     public String getTrack() {
-        return track;
+        return this.track;
     }
 
     public void setTrack() {
 
         try {
-            FileInputStream file = new FileInputStream("/volume1/Tomcat/학생경력정보.xlsx");
+            FileInputStream file = new FileInputStream("학생경력정보.xlsx");
             XSSFWorkbook workbook = new XSSFWorkbook(file);
 
             XSSFSheet sheet = workbook.getSheetAt(0);     // sheet index
@@ -65,7 +64,7 @@ public class Student { // singleTorn
                         XSSFSheet work_sheet = workbook.getSheetAt(Integer.parseInt(work_value));//시트 도착
                         XSSFRow work_row = work_sheet.getRow(1);             // row index
                         XSSFCell work_cell = work_row.getCell(0);
-                        track = work_cell.getStringCellValue();
+                        track = work_cell.getStringCellValue() + "";
                         break;
                     }
                 }

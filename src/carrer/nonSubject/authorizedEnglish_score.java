@@ -7,16 +7,14 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import Data.Data_nonSubject;
 
+
 import java.io.*;
 
 public class authorizedEnglish_score extends nonSubjectActivity{
 
     private boolean authorizedEnglish_check = false;
-    private String authorized_examName;
-    private int essential_score; // 졸업요건정보에서 getter 로 가져와야 함..
-    private int examDate;
     private int examScore;
-    private int certificationDate;
+    private double essential_score;
 
     Data_nonSubject data= Data_nonSubject.getInstance();
 
@@ -36,7 +34,7 @@ public class authorizedEnglish_score extends nonSubjectActivity{
         Data_nonSubject data = Data_nonSubject.getInstance();
         int changed_score = count;
         try {
-            FileInputStream stu_file = new FileInputStream("/volume1/Tomcat/학생경력정보.xlsx");
+            FileInputStream stu_file = new FileInputStream("학생경력정보.xlsx");
             XSSFWorkbook workbook = new XSSFWorkbook(stu_file);
             XSSFSheet sheet_workbook = workbook.getSheetAt(0);     // sheet index
 
@@ -54,7 +52,7 @@ public class authorizedEnglish_score extends nonSubjectActivity{
                     examScore = changed_score;
 
                     try {
-                        FileOutputStream fileoutputstream = new FileOutputStream("/volume1/Tomcat/학생경력정보.xlsx");
+                        FileOutputStream fileoutputstream = new FileOutputStream("학생경력정보.xlsx");
                         workbook.write(fileoutputstream);
                         fileoutputstream.close();
                         System.out.println("엑셀파일생성성공");
@@ -75,6 +73,7 @@ public class authorizedEnglish_score extends nonSubjectActivity{
 
     @Override
     public boolean check_career(){ // 경력 조건 인정
+        essential_score=graduation.getEnglish_grade();
         if(essential_score <= examScore) // essential_score 는 인트형으로 바뀔예정
         {
             authorizedEnglish_check = true;
