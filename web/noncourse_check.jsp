@@ -63,14 +63,6 @@
 				<div class = "form-row">
 						영어 성적 정보<input type="text" class = "form-control" name="english" placeholder="TOEIC 900" maxlength="20" disabled = "disabled" >
 				</div>
-				
-				<div class = "form-row">
-						봉사 정보<input type="text" class = "form-control" name="volunteer" placeholder="2019.11.20, XXX, 5" maxlength="20" disabled = "disabled">
-	            </div>
-				
-				<div class = "form-row">
-						자격증 정보<input type="text" class = "form-control" name="license" placeholder="컴퓨터활용능력 1급, 2019.11.29" maxlength="20" disabled = "disabled">
-   				</div>
    				
 				<div class = "form-row">
 						 현장실습 정보<input type="text" class = "form-control" name="experience" placeholder="XX, 2019-09~2019-12" maxlength="20" disabled = "disabled">
