@@ -16,15 +16,15 @@
 	field_practice a = new field_practice();
 	String userID = null;
 	int examScore = 0;
-	int counseling_number = 0;
-	int field_credit = 0;
-	int examCnt = 0;
-	String authorized_examName = null;
+	//int counseling_number = 0;
+	//int field_credit = 0;
+	//int examCnt = 0;
+	//String authorized_examName = null;
 	userID = (String)session.getAttribute("userID");
 	student.setStudent_code(userID);
-
+	d.read_alldata();
 	examScore = d.getExamScore();
-	authorized_examName = d.getUserCode();
+	//authorized_examName = d.getUserCode();
 
 
 %>

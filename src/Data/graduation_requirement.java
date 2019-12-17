@@ -47,7 +47,7 @@ public class graduation_requirement {
         String s;
 
         try {
-            FileInputStream file = new FileInputStream("졸업요건.xlsx");
+            FileInputStream file = new FileInputStream("/volume1/Tomcat/졸업요건.xlsx");
             XSSFWorkbook workbook = new XSSFWorkbook(file);
 
             XSSFSheet sheet = workbook.getSheetAt(0);
@@ -148,7 +148,7 @@ public class graduation_requirement {
 
     public void change_graduation_requirement(String s, int sheetnum, int rownum, int columnnum) throws IOException {
 
-        FileInputStream file = new FileInputStream("C:\\Users\\user\\Desktop\\소설 구현\\졸업요건.xlsx");
+        FileInputStream file = new FileInputStream("/volume1/Tomcat/졸업요건.xlsx");
         XSSFWorkbook workbook = new XSSFWorkbook(file);
 
         XSSFSheet sheet=workbook.getSheetAt(sheetnum);     // sheet index
@@ -158,7 +158,7 @@ public class graduation_requirement {
         file.close();
 
         try {
-            FileOutputStream fileoutputstream = new FileOutputStream("C:\\Users\\user\\Desktop\\소설 구현\\졸업요건.xlsx");
+            FileOutputStream fileoutputstream = new FileOutputStream("/volume1/Tomcat/졸업요건.xlsx");
             workbook.write(fileoutputstream);
             fileoutputstream.close();
             System.out.println("엑셀파일생성성공");

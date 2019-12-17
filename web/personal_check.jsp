@@ -1,27 +1,31 @@
  <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
- <%@ page import="user.User" %> <!-- userdao의 클래스 가져옴 -->
- <%@ page import="java.io.PrintWriter" %> <!-- 자바 클래스 사용 -->
- <%@ page import="curriculum_career.student_career" %>
  <%@ page import="student.Student" %>
+ <%@ page import="user.User" %>
+ <%@ page import="Data.*" %>
+ <%@ page import="carrer.nonSubject.field_practice" %>
 
 <!DOCTYPE html>
 
  <%
      User user= new User(); //인스턴스생성
     // student_career carceer = new student_career();
-     Student student = new Student();
-     PrintWriter outter = response.getWriter();
-     //carceer.Curriculum_Career_input(request.getParameter("emailid"),request.getParameter("emailid"));
+     Student student = Student.getInstance();
+     Data_nonSubject d = Data_nonSubject.getInstance();
+     data_curriculum p = data_curriculum.getInstance();
+     graduation_requirement g = graduation_requirement.getInstance();
+     field_practice a = new field_practice();
      String userID = null;
+     String birth = null;
+     //carceer.Curriculum_Career_input(request.getParameter("emailid"),request.getParameter("emailid"));
      String curri = null;
      String test = null;
      userID = (String)session.getAttribute("userID");
+     birth = (String)session.getAttribute("userPassword");
      student.setStudent_code(userID);
+     student.setTrack();
      test = student.getStudent_code();
      curri = student.getTrack();
-     System.out.println(curri);
 
  %>
 <html>
@@ -83,10 +87,9 @@
     
     <div class = "form-group">
       	학번 <input type="text" class = "form-control" name="id" placeholder="학번" maxlength="20" disabled = "disabled" value="<%= userID %>">
-   		이름 <input type="text" class = "form-control" name="name" placeholder="이름" maxlength="20" disabled = "disabled"value="<%= test %>">
    		전공 <input type="text" class = "form-control" name="major" placeholder="전공" maxlength="20" disabled = "disabled" value="<%= curri %>">
-   		생년월일 <input type="text" class = "form-control" name="birth" placeholder="980510" maxlength="20" disabled = "disabled" value="<%= request.getParameter("birth") %>">
-   		이메일<input type="text" class = "form-control" name="email" placeholder="hitodaysub@naver.com" maxlength="20" disabled = "disabled" value="<%= request.getParameter("emailid") %>">
+   		생년월일 <input type="text" class = "form-control" name="birth" placeholder="생년월일" maxlength="20" disabled = "disabled" value="<%= birth %>">
+   		이메일<input type="text" class = "form-control" name="email" placeholder="NANANANANA@naver.com" maxlength="20" disabled = "disabled">
    	</div>
    	
     <div class = "modal-footer">

@@ -47,7 +47,7 @@ public class Student { // singleTorn
     public void setTrack() {
 
         try {
-            FileInputStream file = new FileInputStream("학생경력정보.xlsx");
+            FileInputStream file = new FileInputStream("/volume1/Tomcat/학생경력정보.xlsx");
             XSSFWorkbook workbook = new XSSFWorkbook(file);
 
             XSSFSheet sheet = workbook.getSheetAt(0);     // sheet index
