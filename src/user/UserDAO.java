@@ -16,7 +16,7 @@ public class UserDAO {
     // 로그인을 시도하는 함수****
     public int login(String userID, String userPassword) throws IOException {
 
-       FileInputStream file = new FileInputStream("/volume1/Tomcat/1130ver12/excelLoginFile.xlsx");
+       FileInputStream file = new FileInputStream("/volume1/Tomcat/excelLoginFile.xlsx");
         workbook = new XSSFWorkbook(file);
         int cnt1 = 0;
         int cnt2 = 0;

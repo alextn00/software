@@ -11,7 +11,8 @@
 <body>
 <%
     try {
-        //내용
+        Data_nonSubject nonsubject = new Data_nonSubject();
+        int examscore = nonsubject.getExamScore();
     }
     catch(Exception e) {
         e.printStackTrace();

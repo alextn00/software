@@ -17,10 +17,9 @@ public class Student { // singleTorn
 
 
     public Student() {
-        this.track = "";
-        this.student_code = "2017091283";
-        this.pw = "981230";
-
+        this.track = "test";
+        this.student_code = null;
+        this.pw = null;
         setTrack();
     }
 
@@ -43,7 +42,7 @@ public class Student { // singleTorn
     }
 
     public String getTrack() {
-        return this.track;
+        return track;
     }
 
     public void setTrack() {
@@ -66,7 +65,7 @@ public class Student { // singleTorn
                         XSSFSheet work_sheet = workbook.getSheetAt(Integer.parseInt(work_value));//시트 도착
                         XSSFRow work_row = work_sheet.getRow(1);             // row index
                         XSSFCell work_cell = work_row.getCell(0);
-                        track = work_cell.getStringCellValue() + "";
+                        track = work_cell.getStringCellValue();
                         break;
                     }
                 }

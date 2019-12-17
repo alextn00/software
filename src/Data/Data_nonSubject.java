@@ -19,6 +19,7 @@ public class Data_nonSubject {
 
     private static Data_nonSubject data;
 
+
     public static Data_nonSubject getInstance(){
         if (data == null)
             data = new Data_nonSubject();
@@ -27,6 +28,9 @@ public class Data_nonSubject {
 
     public Student getUser() {
         return user;
+    }
+    public String getUserCode(){
+        return user.getStudent_code();
     }
 
     public int getCounseling_number() {
@@ -73,7 +77,7 @@ public class Data_nonSubject {
         this.examCnt = examCnt;
     }
 
-    Data_nonSubject() {
+    public Data_nonSubject() {
         /* 엑셀파일로부터 정보를 불러올 setter */
         read_alldata();
 

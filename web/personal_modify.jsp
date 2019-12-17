@@ -1,6 +1,16 @@
  <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+ <%@ page import="curriculum_career.student_career" %>
+ <%@ page import="java.io.PrintWriter" %> <!-- 자바 클래스 사용 -->
 <!DOCTYPE html>
+ <%
+     User user= new User(); //인스턴스생성
+     student_career carceer = new student_career();
+     PrintWriter outter = response.getWriter();
+     carceer.Curriculum_Career_input(request.getParameter("emailid"),request.getParameter("emailid"));
+     outter.println( user.print_a());
+
+ %>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -62,7 +72,6 @@
     <div class = "form-group">
       	학번 <input type="text" class = "form-control" name="id" placeholder="2018111111" maxlength=20 disabled = "disabled">
     	변경할 비밀번호 <input type="password"  class = "form-control" name="userPassword" maxlength="20">
-   		비밀번호 확인 <input type="password"  class = "form-control" name="userCheckPassword" maxlength="20">
    		이름 <input type = "text" class = "form-control" name = "name" maxlength = "20">
    		전공 <select name = "major" class = "form-control">
    			<option value = ""> 선택 </option>

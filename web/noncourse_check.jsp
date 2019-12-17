@@ -1,6 +1,33 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 		 pageEncoding="UTF-8"%>
+<%@ page import="student.Student" %>
+<%@ page import="user.User" %>
+<%@ page import="Data.*" %>
+<%@ page import="carrer.nonSubject.field_practice" %>
+
+<%@ page import="java.io.PrintWriter" %> <!-- 자바 클래스 사용 -->
 <!DOCTYPE html>
+<%
+	User user= new User();
+	Student student = Student.getInstance();
+	Data_nonSubject d = Data_nonSubject.getInstance();
+	data_curriculum p = data_curriculum.getInstance();
+	graduation_requirement g = graduation_requirement.getInstance();
+	field_practice a = new field_practice();
+	String userID = null;
+	int examScore = 0;
+	int counseling_number = 0;
+	int field_credit = 0;
+	int examCnt = 0;
+	String authorized_examName = null;
+	userID = (String)session.getAttribute("userID");
+	student.setStudent_code(userID);
+
+	examScore = d.getExamScore();
+	authorized_examName = d.getUserCode();
+
+
+%>
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -61,23 +88,23 @@
 		<div class = "modal-body">
 			<form action = "noncourese_modify.jsp" method = "post">
 				<div class = "form-row">
-						영어 성적 정보<input type="text" class = "form-control" name="english" placeholder="TOEIC 900" maxlength="20" disabled = "disabled" >
+						영어 성적 정보<input type="text" class = "form-control" name="english" placeholder="TOEIC" maxlength="20" disabled = "disabled" value="<%= examScore %>">
 				</div>
 				
 				<div class = "form-row">
-						봉사 정보<input type="text" class = "form-control" name="volunteer" placeholder="2019.11.20, XXX, 5" maxlength="20" disabled = "disabled">
+						봉사 정보<input type="text" class = "form-control" name="volunteer" placeholder="없음" maxlength="20" disabled = "disabled"value="<%= authorized_examName %>">
 	            </div>
 				
 				<div class = "form-row">
-						자격증 정보<input type="text" class = "form-control" name="license" placeholder="컴퓨터활용능력 1급, 2019.11.29" maxlength="20" disabled = "disabled">
+						자격증 정보<input type="text" class = "form-control" name="license" placeholder="없음" maxlength="20" disabled = "disabled">
    				</div>
    				
 				<div class = "form-row">
-						 현장실습 정보<input type="text" class = "form-control" name="experience" placeholder="XX, 2019-09~2019-12" maxlength="20" disabled = "disabled">
+						 현장실습 정보<input type="text" class = "form-control" name="experience" placeholder="없음" maxlength="20" disabled = "disabled">
 				</div>
 					
 				<div class = "form-row">
-						 상담 횟수<input type="text" class = "form-control" name="consult" placeholder=" 8 " maxlength="20" disabled = "disabled">
+						 상담 횟수<input type="text" class = "form-control" name="consult" placeholder="없음" maxlength="20" disabled = "disabled">
 				</div>
 
 				<!--<div class = "modal-footer">

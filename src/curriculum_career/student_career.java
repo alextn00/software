@@ -8,7 +8,7 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import student.Student;
-
+import java.time.LocalDateTime;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -69,7 +69,7 @@ public class student_career {
             sc = new student_career();
         return sc;
     }
-    public void Curriculum_Career_input()//교과 경력 입력
+    public void Curriculum_Career_input(String email, String name)//교과 경력 입력
     {
 
         subject_name = keyboard.nextLine(); //과목명
