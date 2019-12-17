@@ -88,16 +88,8 @@
 		<div class = "modal-body">
 			<form action = "noncourese_modify.jsp" method = "post">
 				<div class = "form-row">
-						영어 성적 정보<input type="text" class = "form-control" name="english" placeholder="TOEIC" maxlength="20" disabled = "disabled" value="<%= examScore %>">
+						토익성적<input type="text" class = "form-control" name="english" placeholder="TOEIC" maxlength="20" disabled = "disabled" value="<%= examScore %>">
 				</div>
-				
-				<div class = "form-row">
-						봉사 정보<input type="text" class = "form-control" name="volunteer" placeholder="없음" maxlength="20" disabled = "disabled"value="<%= authorized_examName %>">
-	            </div>
-				
-				<div class = "form-row">
-						자격증 정보<input type="text" class = "form-control" name="license" placeholder="없음" maxlength="20" disabled = "disabled">
-   				</div>
    				
 				<div class = "form-row">
 						 현장실습 정보<input type="text" class = "form-control" name="experience" placeholder="없음" maxlength="20" disabled = "disabled">

@@ -38,7 +38,7 @@
       <li class="dropdown">
         <a href="#" class="dropdown-toggle"
            data-toggle="dropdown" role="button" aria-haspopup="true"
-           aria-expanded="false">메뉴 v <span class="caret"></span></a>
+           aria-expanded="false">메뉴<span class="caret"></span></a>
         <ul class="dropdown-menu">
             <li><a href="course_check.jsp">교과 정보 확인</a></li>
             <li><a href="course_add.jsp">교과 정보 수정</a></li>
@@ -104,7 +104,7 @@
 
                  <div class="modal-footer">
                      <button type="button" class="btn btn-secondary"> 취소 </button>
-                     <button type="submit" class="btn btn-primary"> 저장</button>
+                     <button type="submit" class="btn btn-primary"> 저장 </button>
                  </div>
              </form>
          </div>

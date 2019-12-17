@@ -46,7 +46,7 @@ public class Data_nonSubject {
     }
 
     public int getExamScore() {
-        return examScore;
+        return this.examScore;
     }
 
     public int getExamCnt() {
