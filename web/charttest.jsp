@@ -7,8 +7,6 @@
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
 <%@ page import="java.io.*, org.apache.poi.hssf.usermodel.*, Data.*" %><!-- 클래스 import -->
 <%@ page buffer="100kb" %>
 <%@ page import="student.Student" %>
@@ -49,14 +47,13 @@
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
                 ['Grade', 'Score'],
-                ['A+',  "<%=engscore%>"],
+                ['A+',  5],
                 ['A',  2],
                 ['A-', 4],
                 ['B+', 3],
                 ['B', 3],
                 ['B-', 4],
                 ['C+', 4],
-                ['C+', 3],
                 ['C', 5],
                 ['C-', 5],
                 ['D', 0],
@@ -68,7 +65,9 @@
                 pieSliceText: 'label',
                 title: '학점',
                 pieStartAngle: 100,
+                chartArea:{left:0,top:20,width:"80%",height:"80%"}
             };
+
 
             var chart = new google.visualization.PieChart(document.getElementById('piechart'));
             chart.draw(data, options);
@@ -76,6 +75,6 @@
     </script>
 </head>
 <body>
-<div id="piechart" style="width: 900px; height: 500px;"></div>
+<div id="piechart" style="width: 350px; height: 300px;"></div>
 </body>
 </html>

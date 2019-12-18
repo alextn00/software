@@ -23,6 +23,8 @@
 	userID = (String)session.getAttribute("userID");
 	student.setStudent_code(userID);
 	d.read_alldata();
+	String engscore = request.getParameter("english");
+	String consult = request.getParameter("consult");
 
 	examScore = d.getExamScore();
 	//authorized_examName = d.getUserCode();
@@ -74,7 +76,6 @@
 			 </li>
 		 </ul>
 	 </div>
-	 </div>
  </nav>
  
  <!-- 과목 추가 -->
@@ -89,11 +90,11 @@
 		<div class = "modal-body">
 			<form action = "noncourese_modify.jsp" method = "post">
 				<div class = "form-row">
-						토익성적<input type="text" class = "form-control" name="english" placeholder="TOEIC" maxlength="20" disabled = "disabled" value="<%= examScore %>">
+						토익성적<input type="text" class = "form-control" name="english" placeholder="TOEIC" maxlength="20" disabled = "disabled" value="<%= engscore %>">
 				</div>
    				
 				<div class = "form-row">
-						 현장실습 정보<input type="text" class = "form-control" name="experience" placeholder="없음" maxlength="20" disabled = "disabled">
+						 현장실습 정보<input type="text" class = "form-control" name="experience" placeholder="없음" maxlength="20" disabled = "disabled" value="<%= consult %>">
 				</div>
 					
 				<div class = "form-row">

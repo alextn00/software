@@ -3,14 +3,7 @@
  <%@ page import="curriculum_career.student_career" %>
  <%@ page import="java.io.PrintWriter" %> <!-- 자바 클래스 사용 -->
 <!DOCTYPE html>
- <%
-     User user= new User(); //인스턴스생성
-     student_career carceer = new student_career();
-     PrintWriter outter = response.getWriter();
-     carceer.Curriculum_Career_input(request.getParameter("emailid"),request.getParameter("emailid"));
-     outter.println( user.print_a());
 
- %>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

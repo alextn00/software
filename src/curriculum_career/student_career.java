@@ -76,7 +76,7 @@ public class student_career {
         grade = keyboard.nextLine();//성적
         try {
             Student stu = new Student();
-            FileInputStream file = new FileInputStream("학생경력정보.xlsx");
+            FileInputStream file = new FileInputStream("/volume1/Tomcat/학생경력정보.xlsx");
             XSSFWorkbook workbook = new XSSFWorkbook(file);
 
             XSSFSheet sheet = workbook.getSheetAt(0);     // sheet index
@@ -97,11 +97,11 @@ public class student_career {
                             XSSFCell work_cell = work_row.getCell(11);
                             String s = work_cell.getStringCellValue() + "";
                             if (s.equals(null) || s.equals("")) {
-                                work_cell.setCellValue(subject_name);
+                                work_cell.setCellValue(subject_name); //과목명 입력
                                 work_cell = work_row.getCell(12);
-                                work_cell.setCellValue(Integer.toString(credit));
+                                work_cell.setCellValue(Integer.toString(credit)); // 학점
                                 work_cell = work_row.getCell(13);
-                                work_cell.setCellValue(curriculum_classification);
+                                work_cell.setCellValue(curriculum_classification); // 교과구분
                                 break;
                             }
                         }
@@ -114,7 +114,7 @@ public class student_career {
             file.close();
             data.setter();
             try {
-                FileOutputStream fileoutputstream = new FileOutputStream("학생경력정보.xlsx");
+                FileOutputStream fileoutputstream = new FileOutputStream("/volume1/Tomcat/학생경력정보.xlsx");
                 workbook.write(fileoutputstream);
                 fileoutputstream.close();
                 System.out.println("엑셀파일생성성공");
@@ -134,7 +134,7 @@ public class student_career {
     {
         try {
             Student stu = new Student();
-            FileInputStream file = new FileInputStream("졸업요건.xlsx");
+            FileInputStream file = new FileInputStream("/volume1/Tomcat/졸업요건.xlsx");
             XSSFWorkbook workbook = new XSSFWorkbook(file);
 
             XSSFSheet sheet = workbook.getSheetAt(0);     // sheet index

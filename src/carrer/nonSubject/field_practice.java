@@ -42,7 +42,7 @@ public class field_practice extends nonSubjectActivity{
         int changed_field_credit=field_credit+count;
 
         try {
-            FileInputStream stu_file = new FileInputStream("학생경력정보.xlsx");
+            FileInputStream stu_file = new FileInputStream("/volume1/Tomcat/학생경력정보.xlsx");
             XSSFWorkbook workbook = new XSSFWorkbook(stu_file);
             XSSFSheet sheet_workbook = workbook.getSheetAt(0);     // sheet index
 
@@ -66,7 +66,7 @@ public class field_practice extends nonSubjectActivity{
                     field_credit = changed_field_credit;
 
                     try {
-                        FileOutputStream fileoutputstream = new FileOutputStream("학생경력정보.xlsx");
+                        FileOutputStream fileoutputstream = new FileOutputStream("/volume1/Tomcat/학생경력정보.xlsx");
                         workbook.write(fileoutputstream);
                         fileoutputstream.close();
                         System.out.println("엑셀파일생성성공");

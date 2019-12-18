@@ -58,7 +58,7 @@
 		</div>
 		
 		<div class = "modal-body">
-			<form action = "noncourese_modify.jsp" method = "post">
+			<form action = "noncourse_check.jsp" method = "post">
 				<div class = "form-row">
 						<input type="text" class = "form-control" name="english" placeholder="토익점수 입력" maxlength="20" ><li>
 				</div>
@@ -66,7 +66,7 @@
 				<div class = "form-row">
 						 <input type="text" class = "form-control" name="experience" placeholder="현장실습 기관과 기간을 입력하세요." maxlength="20"><li>
 				</div>
-					
+
 				<div class = "form-row">
 	                	상담 횟수<select name = "consult" class = "form-control">
 						<option value="0">0</option>
@@ -77,13 +77,13 @@
 	                    <option value="5">5</option>
 	                    <option value="6">6</option>
 	                    <option value="7">7</option>
-	                    <option value="8"selected>8</option>
+	                    <option value="8">8</option>
 	                    </select>
 				</div>
 				
             	<div class = "modal-footer">
              		<button type = "submit" class = "btn btn-secondary" onclick = "noncourse_check.jsp"> 취소 </button>
-             		<button type = "submit" class = "btn btn-primary" onclick = "noncourse_modify_action.jsp"> 저장</button>
+             		<button type = "submit" class = "btn btn-primary" > 저장 </button>
           		</div>
 			</form>
 		</div>

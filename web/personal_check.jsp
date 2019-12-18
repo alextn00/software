@@ -87,7 +87,7 @@
     
     <div class = "form-group">
       	학번 <input type="text" class = "form-control" name="id" placeholder="학번" maxlength="20" disabled = "disabled" value="<%= userID %>">
-   		전공 <input type="text" class = "form-control" name="major" placeholder="전공" maxlength="20" disabled = "disabled" value="<%= curri %>">
+   		전공 <input type="text" class = "form-control" name="major" placeholder="전공" maxlength="20" disabled = "disabled" value="<%= request.getParameter("emailid") %>">
    		생년월일 <input type="text" class = "form-control" name="birth" placeholder="생년월일" maxlength="20" disabled = "disabled" value="<%= userPassword %>">
    		이메일<input type="text" class = "form-control" name="email" placeholder="NANANANANA@naver.com" maxlength="20" disabled = "disabled">
    	</div>
