@@ -59,16 +59,23 @@
 		
 		<div class = "modal-body">
 			<form action = "noncourese_modify.jsp" method = "post">
-				<div class = "form-row">
-						<input type="text" class = "form-control" name="english" placeholder="시험 종류와 성적을 입력하세요." maxlength="20" ><li>
-				</div>
+				<input type="text" class = "form-control" name="english" placeholder="시험 종류와 성적을 입력하세요." maxlength="20" >
 				
+				<br>
+				<input type="text" class = "form-control" name="volunteer" placeholder="봉사 일시, 기관, 시간을 입력하세요." maxlength="20">
+	            
+				<br>
 				<div class = "form-row">
-						 <input type="text" class = "form-control" name="experience" placeholder="현장실습 기관과 기간을 입력하세요." maxlength="20"><li>
+						<input type="text" class = "form-control" name="license" placeholder="취득한 자격증 종류와 취득날짜를 입력하세요." maxlength="20">
+   				</div>
+   				<br>
+				<div class = "form-row">
+						 <input type="text" class = "form-control" name="experience" placeholder="현장실습 기관과 기간을 입력하세요." maxlength="20">
 				</div>
-					
+				<br>
 				<div class = "form-row">
 	                	상담 횟수<select name = "consult" class = "form-control">
+	                	<option value="9"selected>상담횟수를 선택하세요.</option>
 						<option value="0">0</option>
                     	<option value="1">1</option>
 	                    <option value="2">2</option>
@@ -77,7 +84,7 @@
 	                    <option value="5">5</option>
 	                    <option value="6">6</option>
 	                    <option value="7">7</option>
-	                    <option value="8"selected>8</option>
+	                    <option value="8">8</option>
 	                    </select>
 				</div>
 				
