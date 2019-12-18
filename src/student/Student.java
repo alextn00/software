@@ -1,5 +1,7 @@
 package student;
 
+import Data.*;
+
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -14,12 +16,18 @@ public class Student { // singleTorn
     private String track;
     private String student_code;
     private String pw;
+    private String user_name;
+    private String birthday;
+    private String email;
+
 
     public Student() {
         this.track = "";
-        this.student_code = "2017091283";
-        this.pw = "981230";
-        setTrack();
+        this.student_code = "";
+        this.pw = "";
+        this.user_name="";
+        this.birthday="";
+        this.email="";
     }
 
     public static Student getInstance() {
@@ -29,7 +37,9 @@ public class Student { // singleTorn
     }
 
     public void getData() { // 학생의 name에 맞게 액셀파일에서 정보를 불러오는 메소드
-
+        Data_nonSubject nonSubject=Data_nonSubject.getInstance();
+        data_curriculum curriculum=data_curriculum.getInstance();
+        graduation_requirement graduationData = graduation_requirement.getInstance();
     }
 
     public static Student getStudent() {
@@ -44,10 +54,10 @@ public class Student { // singleTorn
         return this.track;
     }
 
-    public void setTrack() {
+    public void setUserInformation() {
 
         try {
-            FileInputStream file = new FileInputStream("/volume1/Tomcat/학생경력정보.xlsx");
+            FileInputStream file = new FileInputStream("학생경력정보.xlsx");
             XSSFWorkbook workbook = new XSSFWorkbook(file);
 
             XSSFSheet sheet = workbook.getSheetAt(0);     // sheet index
@@ -57,14 +67,19 @@ public class Student { // singleTorn
                 if (row != null) {
                     XSSFCell cell = row.getCell(1);//학번 비교하기
                     String value = cell.getStringCellValue() + "";
-                   // System.out.println(value);
                     if (value.equals(student_code)) {
                         XSSFCell num_cell = row.getCell(0);//몇번째 시트인지 찾기
                         String work_value = num_cell.getStringCellValue() + "";
                         XSSFSheet work_sheet = workbook.getSheetAt(Integer.parseInt(work_value));//시트 도착
                         XSSFRow work_row = work_sheet.getRow(1);             // row index
                         XSSFCell work_cell = work_row.getCell(0);
-                        track = work_cell.getStringCellValue() + "";
+                        this.setTrack(work_cell.getStringCellValue() + "");
+                        work_cell = work_row.getCell(17);
+                        this.setUser_name(work_cell.getStringCellValue() + "");
+                        work_cell = work_row.getCell(18);
+                        this.setBirthday(work_cell.getStringCellValue() + "");
+                        work_cell = work_row.getCell(19);
+                        this.setEmail(work_cell.getStringCellValue() + "");
                         break;
                     }
                 }
@@ -92,4 +107,17 @@ public class Student { // singleTorn
     public void setPw(String pw) {
         this.pw = pw;
     }
+
+    public void setTrack(String track) { this.track = track; }
+
+    public String getUser_name() {return user_name; }
+
+    public void setUser_name(String user_name) { this.user_name = user_name; }
+
+    public String getBirthday() { return birthday; }
+
+    public void setBirthday(String birthday) { this.birthday = birthday; }
+    public String getEmail() { return email; }
+
+    public void setEmail(String email) { this.email = email; }
 }

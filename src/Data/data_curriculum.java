@@ -1,3 +1,5 @@
+//// data_curriculum.java 파일
+
 package Data;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
@@ -14,8 +16,13 @@ import student.*;
 
 public class data_curriculum {
     Scanner keyboard = new Scanner(System.in);
-    Student stu = Student.getInstance();
 
+    //------------클래스 객체----------//
+    private static data_curriculum curriculum;
+    Student stu;
+    //--------------------------------//
+
+    private String student_code; //학번
     private double all_creadit;//총이수학점
     private double refinement_credit; //교양과목 이수학점
     private double base_refinement_credit;//기본소양 이수학점
@@ -26,10 +33,9 @@ public class data_curriculum {
     private String[] subject_name;      //과목명
     private String[] credit;      //학점
     private String[] curriculum_classification; //교과구분
-
-    private static data_curriculum curriculum;
-    String num= stu.getStudent_code();
-
+    private String[] subject_code; //과목코드
+    private String[] course_semester; // 연도/학기
+    private String[] grade; // 성적
 
     public static data_curriculum getInstance() {
 
@@ -39,7 +45,11 @@ public class data_curriculum {
         return curriculum;
     }
 
-    public data_curriculum() { setter(); }
+    public data_curriculum() {
+        stu = Student.getInstance();
+        student_code = stu.getStudent_code();
+        setter();
+    }
 
     public void setter() {
 
@@ -57,7 +67,7 @@ public class data_curriculum {
                 if (row != null) {
                     XSSFCell cell = row.getCell(1);//학번 비교하기
                     String value = cell.getStringCellValue() + "";
-                    if (value.equals(num)) {
+                    if (value.equals(student_code)) {
                         XSSFCell num_cell = row.getCell(0);//몇번째 시트인지 찾기
                         work_value = Integer.parseInt(num_cell.getStringCellValue() + "");
                         work_sheet = workbook.getSheetAt(work_value);//시트 도착
@@ -97,10 +107,12 @@ public class data_curriculum {
             if (!s.equals(""))
                 startup_capability = Double.parseDouble(cell.getStringCellValue() + "");  // 창업 역량 학점
 
-
             subject_name = ary_setter(workbook, work_value, 11);      //과목명
             credit = ary_setter(workbook, work_value, 12);     //학점
             curriculum_classification = ary_setter(workbook, work_value, 13); //교과구분
+            subject_code = ary_setter(workbook, work_value, 14); //과목코드
+            course_semester = ary_setter(workbook, work_value, 15); //  연도/학기
+            grade = ary_setter(workbook, work_value, 16); // 과목 성적
         }
         catch(Exception e){
             e.printStackTrace();
@@ -173,4 +185,27 @@ public class data_curriculum {
         return curriculum_classification;
     }
 
+    public String[] getSubject_code() {
+        return subject_code;
+    }
+
+    public void setSubject_code(String[] subject_code) {
+        this.subject_code = subject_code;
+    }
+
+    public String[] getCourse_semester() {
+        return course_semester;
+    }
+
+    public void setCourse_semester(String[] course_semester) {
+        this.course_semester = course_semester;
+    }
+
+    public String[] getGrade() {
+        return grade;
+    }
+
+    public void setGrade(String[] grade) {
+        this.grade = grade;
+    }
 }

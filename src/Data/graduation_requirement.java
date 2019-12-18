@@ -47,7 +47,7 @@ public class graduation_requirement {
         String s;
 
         try {
-            FileInputStream file = new FileInputStream("/volume1/Tomcat/졸업요건.xlsx");
+            FileInputStream file = new FileInputStream("/volume1/Tomcat/학생경력정보.xlsx");
             XSSFWorkbook workbook = new XSSFWorkbook(file);
 
             XSSFSheet sheet = workbook.getSheetAt(0);

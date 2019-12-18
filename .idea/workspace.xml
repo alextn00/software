@@ -6,28 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5413a6ef-df38-45e5-ac61-53c67da63b2a" name="Default Changelist" comment="1214 import change">
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/course_add_action.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/axis.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-collections4-4.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-compress-1.19.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-discovery-0.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-logging-1.0.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/curvesapi-1.06.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/jackson-databind-2.10.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/jaxrpc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/json-simple-1.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/log4j-1.2.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-8.0.12.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/poi-4.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/poi-examples-4.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/poi-excelant-4.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/poi-ooxml-4.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/poi-ooxml-schemas-4.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/poi-scratchpad-4.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/saaj.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/wsdl4j-1.5.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/xmlbeans-3.1.0.jar" afterDir="false" />
+    <list default="true" id="5413a6ef-df38-45e5-ac61-53c67da63b2a" name="Default Changelist" comment="1219 first commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver10.war" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver11.war" beforeDir="false" />
@@ -85,19 +64,18 @@
       <change beforePath="$PROJECT_DIR$/out/production/webSoftware/user/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webSoftware/user/UserDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/webSoftware/user/test$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webSoftware/user/test$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/webSoftware/user/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webSoftware/user/test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Data_nonSubject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Data_nonSubject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Data/data_curriculum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/data_curriculum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/graduation_requirement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/graduation_requirement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/carrer/nonSubject/authorizedEnglish_score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrer/nonSubject/authorizedEnglish_score.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/carrer/nonSubject/counseling_history.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrer/nonSubject/counseling_history.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/carrer/nonSubject/field_practice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrer/nonSubject/field_practice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/carrer/nonSubject/nonSubjectActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrer/nonSubject/nonSubjectActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/curriculum_career/student_career.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/curriculum_career/student_career.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/charttest.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/charttest.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/course_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/course_add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/noncourse_check.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/noncourse_check.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/student/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/noncourse_modify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/noncourse_modify.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/noncourse_modify_action.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/noncourse_modify_action.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/personal_check.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/personal_check.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/personal_modify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/personal_modify.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/summary.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/summary.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -156,6 +134,9 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="carrer.nonSubject" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\tnawl\IdeaProjects\dd\web" />
       <recent name="C:\Users\tnawl\IdeaProjects\dd\web\WEB-INF" />
@@ -622,7 +603,7 @@
       <workItem from="1576565903347" duration="17849000" />
       <workItem from="1576632482210" duration="636000" />
       <workItem from="1576643631180" duration="7279000" />
-      <workItem from="1576644232696" duration="10692000" />
+      <workItem from="1576644232696" duration="16030000" />
     </task>
     <task id="LOCAL-00001" summary="1125ver2">
       <created>1574689557681</created>
@@ -708,7 +689,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576647688324</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="1219 first commit">
+      <created>1576687373842</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1576687373842</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -738,7 +726,8 @@
     <MESSAGE value="1217 ver2. pjw" />
     <MESSAGE value="1217 ver3. pjw" />
     <MESSAGE value="1218 main change. for submit, add action jsp by pjw" />
-    <option name="LAST_COMMIT_MESSAGE" value="1218 main change. for submit, add action jsp by pjw" />
+    <MESSAGE value="1219 first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="1219 first commit" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/dd$personal_check_jsp.dat" NAME="personal_check.jsp Coverage Results" MODIFIED="1576566623918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

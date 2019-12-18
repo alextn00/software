@@ -24,7 +24,6 @@
         String userID = null;
         userID = (String)session.getAttribute("userID");
         student.setStudent_code(userID);
-        student.setTrack();
         student.getData();
         Data_nonSubject d = Data_nonSubject.getInstance();
         data_curriculum p = data_curriculum.getInstance();
@@ -32,6 +31,10 @@
         field_practice a = new field_practice();
         String consult = request.getParameter("consult");
         a.change_nonSubjectActivity(consult);
+
+
+        /////////////////////////////////
+
 
         // counseling_history history = null;
       //  String userID = null;
@@ -48,8 +51,8 @@
 
         PrintWriter outter = response.getWriter();
         outter.println("<script>");
-        outter.println("alert('저장되었습니다')");
-        outter.println("history.back()");
+        outter.println("alert('저장되었습니다.')");
+        outter.println("location.href = 'summary.jsp'");
         outter.println("</script>");
 
     }catch (Exception e){

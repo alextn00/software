@@ -16,66 +16,65 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-
 public class student_career {
-    boolean graduation_check = false; // 학생교과경력 졸업요건 충족 여부
 
     Scanner keyboard = new Scanner(System.in);
+
+    //-------클래스 객체-------//
+    private static student_career sc;
+    data_curriculum data ;
+    graduation_requirement gr;
+    Student stu;
+    //------------------------//
+
+    boolean graduation_check = false; // 학생교과경력 졸업요건 충족 여부
     double refinement_credit; //교양과목 이수학점
     double majorbase_credit; //전공기반 이수학점
     double base_refinement_credit;//기본소양 이수학점
     double major_credit; //전공 이수학점
     double all_creadit;//총이수학점
-    String track;
-    String num;
     double global_capability;
     double startup_capability;
-
     int credit;//학점
-    private static student_career sc;
-    Student st=Student.getInstance();
-    //  Student user = Student.getInstance();
-    String subject_name; //과목명
-
-    public boolean isGraduation_check() {
-        return graduation_check;
-    }
-
+    String track; // 전공트랙
     String curriculum_classification; //교과구분
-    String grade;//성적
-    data_curriculum data ;
-    graduation_requirement gr;
-
-    public student_career() {
-        data = data.getInstance();
-        track = st.getTrack();
-        num = st.getStudent_code();
-        refinement_credit = data.getRefinement_credit(); //교양과목 이수학점
-        majorbase_credit = data.getMajorbase_credit(); //전공기반 이수학점
-        base_refinement_credit = data.getBase_refinement_credit();//기본소양 이수학점
-        major_credit = data.getMajor_credit(); //전공 이수학점
-        all_creadit = data.getAll_creadit();//총이수학점
-        gr = graduation_requirement.getInstance();
-        global_capability=data.getGlobal_capability();
-        startup_capability=data.getStartup_capability();
-
-        ///###  String subject_name = keyboard.nextLine(); //과목명
-        ///###  String curriculum_classification = keyboard.nextLine(); //교과구분
-    }
+    String grade; //성적
+    String subject_name; //과목명
 
     public static student_career getInstance()  {
         if (sc == null)
             sc = new student_career();
         return sc;
     }
-    public void Curriculum_Career_input()//교과 경력 입력
-    {
 
+    public student_career() {
+        data = data.getInstance();
+        gr = graduation_requirement.getInstance();
+        stu = Student.getInstance();
+    }
+
+    public boolean isGraduation_check() {
+        return graduation_check;
+    }
+
+    public void Curriculum_Career_Read(){
+        refinement_credit = data.getRefinement_credit(); //교양과목 이수학점
+        majorbase_credit = data.getMajorbase_credit(); //전공기반 이수학점
+        base_refinement_credit = data.getBase_refinement_credit();//기본소양 이수학점
+        major_credit = data.getMajor_credit(); //전공 이수학점
+        all_creadit = data.getAll_creadit();//총이수학점
+        global_capability = data.getGlobal_capability();
+        startup_capability = data.getStartup_capability();
+        track = stu.getTrack();
+    }
+
+    public void Curriculum_Career_Input()//교과 경력 입력
+    {
         subject_name = keyboard.nextLine(); //과목명
         curriculum_classification = keyboard.nextLine(); //교과구분
         grade = keyboard.nextLine();//성적
+
         try {
-            Student stu = new Student();
             FileInputStream file = new FileInputStream("/volume1/Tomcat/학생경력정보.xlsx");
             XSSFWorkbook workbook = new XSSFWorkbook(file);
 
@@ -97,11 +96,11 @@ public class student_career {
                             XSSFCell work_cell = work_row.getCell(11);
                             String s = work_cell.getStringCellValue() + "";
                             if (s.equals(null) || s.equals("")) {
-                                work_cell.setCellValue(subject_name); //과목명 입력
+                                work_cell.setCellValue(subject_name);
                                 work_cell = work_row.getCell(12);
-                                work_cell.setCellValue(Integer.toString(credit)); // 학점
+                                work_cell.setCellValue(Integer.toString(credit));
                                 work_cell = work_row.getCell(13);
-                                work_cell.setCellValue(curriculum_classification); // 교과구분
+                                work_cell.setCellValue(curriculum_classification);
                                 break;
                             }
                         }
@@ -126,14 +125,11 @@ public class student_career {
         catch(Exception e){
             e.printStackTrace();
         }
-
     }
-
 
     public void Curriculum_Career_Modify()//교과 경력 수정,과목명을 입력받으면 학점을 고치게함
     {
         try {
-            Student stu = new Student();
             FileInputStream file = new FileInputStream("/volume1/Tomcat/졸업요건.xlsx");
             XSSFWorkbook workbook = new XSSFWorkbook(file);
 
@@ -167,7 +163,7 @@ public class student_career {
             data.setter();
 
             try {
-                FileOutputStream fileoutputstream = new FileOutputStream("졸업요건.xlsx");
+                FileOutputStream fileoutputstream = new FileOutputStream("/volume1/Tomcat/졸업요건.xlsx");
                 workbook.write(fileoutputstream);
                 fileoutputstream.close();
                 System.out.println("엑셀파일생성성공");
@@ -181,12 +177,10 @@ public class student_career {
         }
     }
 
-    public void Studied_Creadit_upadate()//이수학점 업데이트
+    public void Studied_Creadit_Update()//이수학점 업데이트
     {
-        Student stu = new Student();
-
         try {
-            FileInputStream file = new FileInputStream("C:\\Users\\leehandsub\\Desktop\\학생경력정보.xlsx");
+            FileInputStream file = new FileInputStream("/volume1/Tomcat/학생경력정보.xlsx");
             XSSFWorkbook workbook = new XSSFWorkbook(file);
 
             XSSFSheet sheet = workbook.getSheetAt(0);     // sheet index
@@ -273,7 +267,7 @@ public class student_career {
             file.close();
 
             try {
-                FileOutputStream fileoutputstream = new FileOutputStream("C:\\Users\\leehandsub\\Desktop\\학생경력정보.xlsx");
+                FileOutputStream fileoutputstream = new FileOutputStream("/volume1/Tomcat/학생경력정보.xlsx");
                 workbook.write(fileoutputstream);
                 fileoutputstream.close();
                 System.out.println("엑셀파일생성성공");
@@ -287,7 +281,6 @@ public class student_career {
             e.printStackTrace();
         }
     }
-
 
     public boolean check_essential_major()
     {
@@ -343,13 +336,6 @@ public class student_career {
                 graduation_check = true;
             }
 
-            /* 졸업요건 충족 확인용
-            System.out.println(all_creadit_pass);
-            System.out.println(base_refinement_credit_pass);
-            System.out.println(majorbase_credit_pass);
-            System.out.println(major_credit_pass);
-            System.out.println(essential_major_pass);
-             */
         } else if (track.equals("다중전공트랙")) {
             boolean all_creadit_pass = false;
             boolean refinement_credit_pass = false;

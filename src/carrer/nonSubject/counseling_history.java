@@ -44,9 +44,9 @@ public class counseling_history extends nonSubjectActivity{
     }
 
     @Override
-    // #### 상담횟수가 0일때는 초기값 설정해줘야함
-    public void change_nonSubjectActivity(int count){ // 액셀 파일에서 정보를 수정하는 메소드
-        int changed_counseling = this.counseling_number + count;
+    public void change_nonSubjectActivity(String count){ // 액셀 파일에서 정보를 수정하는 메소드
+
+        int changed_counseling_number = counseling_number+Integer.parseInt(count);
 
         try {
             FileInputStream stu_file = new FileInputStream("/volume1/Tomcat/학생경력정보.xlsx");
@@ -64,8 +64,8 @@ public class counseling_history extends nonSubjectActivity{
                     XSSFSheet sheet_student = workbook.getSheetAt(i);     // sheet index
                     XSSFRow row_student = sheet_student.getRow(1);             // row index
                     XSSFCell cell_student = row_student.getCell(10);            // cell index
-                    cell_student.setCellValue(Integer.toString(changed_counseling)); // 수정된 상담횟수를 문자열로 다시 입력
-                    System.out.println(changed_counseling);
+                    cell_student.setCellValue(Integer.toString(changed_counseling_number)); // 수정된 상담횟수를 문자열로 다시 입력
+                    System.out.println(Integer.toString(changed_counseling_number));
 
                     try {
                         FileOutputStream fileoutputstream = new FileOutputStream("/volume1/Tomcat/학생경력정보.xlsx");
@@ -80,7 +80,7 @@ public class counseling_history extends nonSubjectActivity{
                 }
                 i++;
             }
-
+            data.read_alldata();
             stu_file.close();
         } catch (Exception e) {
             e.printStackTrace();

@@ -1,4 +1,3 @@
-
 package Data;
 
 
@@ -9,17 +8,19 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import student.Student;
 
 import java.io.FileInputStream;
+import java.util.Arrays;
+
 public class Data_nonSubject {
 
     Student user = Student.getInstance();
     private int counseling_number;
     private int field_credit; // #### class diagram 에 추가되어야 하는 attribute , (1,11) cell 에 있음
-    private String authorized_examName;
+
+
+    private String[] field_content;
     private int examScore;
-    private int examCnt;
 
     private static Data_nonSubject data;
-
 
     public static Data_nonSubject getInstance(){
         if (data == null)
@@ -30,9 +31,6 @@ public class Data_nonSubject {
     public Student getUser() {
         return user;
     }
-    public String getUserCode(){
-        return user.getStudent_code();
-    }
 
     public int getCounseling_number() {
         return counseling_number;
@@ -42,16 +40,8 @@ public class Data_nonSubject {
         return field_credit;
     }
 
-    public String getAuthorized_examName() {
-        return authorized_examName;
-    }
-
     public int getExamScore() {
-        return this.examScore;
-    }
-
-    public int getExamCnt() {
-        return examCnt;
+        return examScore;
     }
 
     public static Data_nonSubject getData() {
@@ -66,22 +56,21 @@ public class Data_nonSubject {
         this.field_credit = field_credit;
     }
 
-    public void setAuthorized_examName(String authorized_examName) {
-        this.authorized_examName = authorized_examName;
-    }
-
     public void setExamScore(int examScore) {
         this.examScore = examScore;
     }
 
-    public void setExamCnt(int examCnt) {
-        this.examCnt = examCnt;
+    public String[] getField_content() {
+        return field_content;
     }
 
-    public Data_nonSubject() {
+    public void setField_content(String[] field_content) {
+        this.field_content = field_content;
+    }
+
+    Data_nonSubject() {
         /* 엑셀파일로부터 정보를 불러올 setter */
         read_alldata();
-
     }
 
     public void read_alldata() {
@@ -116,7 +105,7 @@ public class Data_nonSubject {
                 XSSFRow row_student = sheet_student.getRow(1);             // row index
                 XSSFCell cell_student = row_student.getCell(10);
                 if(!("".equals(cell_student.getStringCellValue())))
-                setCounseling_number(Integer.parseInt(cell_student.getStringCellValue() + ""));
+                    setCounseling_number(Integer.parseInt(cell_student.getStringCellValue() + ""));
                 condition = false;
             }
             i++;
@@ -130,6 +119,8 @@ public class Data_nonSubject {
 
         boolean condition = true;
         int i = 1;
+        int lineCnt=0;
+        int fieldContent_cnt=-1;
 
         while (condition) {
             XSSFRow row_workbook = sheet_workbook.getRow(i);             // row index
@@ -137,9 +128,25 @@ public class Data_nonSubject {
             if ((cell_workbook.getStringCellValue() + "").equals(user.getStudent_code()) == true) {
                 XSSFSheet sheet_student = workbook.getSheetAt(i);     // sheet index
                 XSSFRow row_student = sheet_student.getRow(1);             // row index
+                lineCnt=2;
                 XSSFCell cell_student = row_student.getCell(9);            // cell index
                 if(!("".equals(cell_student.getStringCellValue())))
-                setField_credit( this.field_credit = Integer.parseInt(cell_student.getStringCellValue() + ""));
+                    setField_credit( this.field_credit = Integer.parseInt(cell_student.getStringCellValue() + ""));
+
+                this.setField_content(ary_setter(workbook,i,9));
+
+
+                /*
+                row_student=sheet_student.getRow(lineCnt);
+                cell_student=row_student.getCell(9);
+                while(!("".equals(cell_student.getStringCellValue()))){
+                    this.setField_content(cell_student.getStringCellValue(),++fieldContent_cnt);
+                    row_student=sheet_student.getRow(++lineCnt);
+                    cell_student=row_student.getCell(9);
+                }*/
+
+
+
                 condition = false;
             }
             i++;
@@ -161,11 +168,37 @@ public class Data_nonSubject {
                 XSSFRow row_student = sheet_student.getRow(1);             // row index
                 XSSFCell cell_student = row_student.getCell(8);            // cell index
                 if(!("".equals(cell_student.getStringCellValue())))
-                setExamScore(Integer.parseInt(cell_student.getStringCellValue() + ""));
+                    setExamScore(Integer.parseInt(cell_student.getStringCellValue() + ""));
                 condition = false;
             }
             i++;
         }
+    }
+
+    private String[] ary_setter(XSSFWorkbook workbook, int sheetnum, int columnnum){
+        /* 엑셀파일로부터 정보를 불러올 setter */
+
+        String[] value = new String[100];
+        int i=1;
+
+        try {
+            XSSFSheet sheet=workbook.getSheetAt(sheetnum);     // sheet index
+
+            int rows = sheet.getPhysicalNumberOfRows();
+
+            for(i=2; i<rows; i++){
+                XSSFRow row=sheet.getRow(i);              // row index
+                XSSFCell cell = row.getCell(columnnum);             // cell index
+                if(cell.getStringCellValue() == "")
+                    break;
+                value[i-1] = cell.getStringCellValue()+"";
+            }
+
+        }catch(Exception e) {
+            e.printStackTrace();
+        }
+        String[] real_value = Arrays.copyOfRange(value, 0, i-1);
+        return real_value;
     }
 
 }

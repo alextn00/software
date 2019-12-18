@@ -29,10 +29,10 @@ public class authorizedEnglish_score extends nonSubjectActivity{
     }
 
     @Override
-    public void change_nonSubjectActivity(int count){ // 액셀 파일에서 정보를 수정하는 메소드
+    public void change_nonSubjectActivity(String count){ // 액셀 파일에서 정보를 수정하는 메소드
 
         Data_nonSubject data = Data_nonSubject.getInstance();
-        int changed_score = count;
+        int changed_score = Integer.parseInt(count);
         try {
             FileInputStream stu_file = new FileInputStream("/volume1/Tomcat/학생경력정보.xlsx");
             XSSFWorkbook workbook = new XSSFWorkbook(stu_file);
@@ -70,6 +70,7 @@ public class authorizedEnglish_score extends nonSubjectActivity{
             e.printStackTrace();
         }
     }
+
 
     @Override
     public boolean check_career(){ // 경력 조건 인정

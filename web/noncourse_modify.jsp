@@ -58,7 +58,7 @@
 		</div>
 		
 		<div class = "modal-body">
-			<form action = "noncourse_check.jsp" method = "post">
+			<form action = "noncourse_modify_action.jsp" method = "post">
 				<div class = "form-row">
 						<input type="text" class = "form-control" name="english" placeholder="토익점수 입력" maxlength="20" ><li>
 				</div>

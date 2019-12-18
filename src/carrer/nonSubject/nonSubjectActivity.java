@@ -15,7 +15,7 @@ public class nonSubjectActivity{
 
     public void scan_nonSubjectActivity(){ }; // 액셀 파일에서 정보를 가져오는 메소드
 
-    public void change_nonSubjectActivity(int count){ }; // 액셀 파일에서 정보를 수정하는 메소드
+    public void change_nonSubjectActivity(String count){ }; // 액셀 파일에서 정보를 수정하는 메소드
 
     public boolean check_career(){ return true; }; // 경력 조건 인정
 
@@ -36,7 +36,7 @@ public class nonSubjectActivity{
 
         if(field.check_career() == true && authorizedEnglish.check_career() == true && counseling.check_career() == true)
         {
-             setGraduation_check(true);
+            setGraduation_check(true);
         }
         else
             setGraduation_check(false);

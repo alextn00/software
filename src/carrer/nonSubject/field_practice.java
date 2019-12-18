@@ -15,6 +15,7 @@ public class field_practice extends nonSubjectActivity{
     private boolean field_practice_check;
     private int field_credit; // #### class diagram 에 추가되어야 하는 attribute , (1,11) cell 에 있음
     private double essential_field_credit; // 3학점 이상 채우면 pass!
+    private String[] field_content;
 
     Data_nonSubject data = Data_nonSubject.getInstance();
 
@@ -24,6 +25,14 @@ public class field_practice extends nonSubjectActivity{
 
     public int getField_credit() {
         return field_credit;
+    }
+
+    public String[] getField_content() {
+        return field_content;
+    }
+
+    public void setField_content(String[] field_content) {
+        this.field_content = field_content;
     }
 
     public field_practice(){
@@ -37,9 +46,9 @@ public class field_practice extends nonSubjectActivity{
 
 
     @Override
-    public void change_nonSubjectActivity(int count){ // 액셀 파일에서 정보를 수정하는 메소드
+    public void change_nonSubjectActivity(String count){ // 액셀 파일에서 정보를 수정하는 메소드
 
-        int changed_field_credit=field_credit+count;
+        int changed_field_credit=field_credit+Integer.parseInt(count);
 
         try {
             FileInputStream stu_file = new FileInputStream("/volume1/Tomcat/학생경력정보.xlsx");
@@ -78,7 +87,7 @@ public class field_practice extends nonSubjectActivity{
                 }
                 i++; // #### 마찬가지로 수정해야함
             }
-
+            data.read_alldata();
             stu_file.close();
         } catch (Exception e) {
             e.printStackTrace();
