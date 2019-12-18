@@ -1,44 +1,81 @@
-<%--
+        <%--
   Created by IntelliJ IDEA.
   User: tnawl
   Date: 2019-11-30
   Time: 오후 8:27
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
+<%@ page import="java.io.*, org.apache.poi.hssf.usermodel.*, Data.*" %><!-- 클래스 import -->
+<%@ page buffer="100kb" %>
+<%@ page import="student.Student" %>
+<%@ page import="user.User" %>
+<%@ page import="Data.*" %>
+<%@ page import="carrer.nonSubject.field_practice" %>
+<%
+    int engscore = 0;
 
+
+    try {
+        Student student = Student.getInstance(); //인스턴스 생성
+        Data_nonSubject d = Data_nonSubject.getInstance();
+        data_curriculum p = data_curriculum.getInstance();
+        graduation_requirement g = graduation_requirement.getInstance();
+        field_practice a = new field_practice();
+        String userID = null;
+        userID = (String) session.getAttribute("userID"); // session에 존재하는 학번 넘겨 java 소스코드로 넘겨 처리하기 위한 사전작업
+        student.setStudent_code(userID);
+        d.read_alldata(); // 목록갱신.
+        String engpara = null;
+        //영어성적 get
+        engpara = request.getParameter("english");
+        engscore = Integer.parseInt(engpara);
+        d.setExamScore(engscore);
+
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+
+%>
 <html>
 <head>
-    <title>학점분포</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-    <meta name="viewport" content="width=device-width" initial-scale="1">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-        google.charts.load('current', {'packages':['corechart']});
-        google.charts.setOnLoadCallback(drawVisualization);
-
-        function drawVisualization() {
+        google.charts.load("current", {packages:["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
             var data = google.visualization.arrayToDataTable([
-                ['A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+'],
-                ['1학년 1학기',  165,      938,         522,             998,           450,      614.6],
-                ['1학년 2학기',  135,      1120,        599,             1268,          288,      682],
-                ['2학년 1학기',  157,      1167,       587,             807,           397,      623],
-                ['2학년 2학기',  139,      1110,        615,             968,           215,      609.4],
-                ['3학년 1학기',  136,      691,      629,             1026,          366,      569.6]
+                ['Grade', 'Score'],
+                ['A+',  "<%=engscore%>"],
+                ['A',  2],
+                ['A-', 4],
+                ['B+', 3],
+                ['B', 3],
+                ['B-', 4],
+                ['C+', 4],
+                ['C+', 3],
+                ['C', 5],
+                ['C-', 5],
+                ['D', 0],
+                ['F', 2]
             ]);
+
             var options = {
-                title : '학점분포',
-                vAxis: {title: '학점'},
-                hAxis: {title: '학기'},
-                seriesType: 'bars',
-                series: {5: {type: 'line'}}
+                legend: 'none',
+                pieSliceText: 'label',
+                title: '학점',
+                pieStartAngle: 100,
             };
 
-            var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
             chart.draw(data, options);
         }
-    </script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/46.2/loader.js"></script>
-    <link id="load-css-0" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/46.2/css/core/tooltip.css"><link id="load-css-1" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/46.2/css/util/util.css"><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/46.2/js/jsapi_compiled_format_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/46.2/js/jsapi_compiled_default_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/46.2/js/jsapi_compiled_ui_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/46.2/js/jsapi_compiled_corechart_module.js"></script></head>
+    </script>
+</head>
 <body>
-<div id="chart_div" style="width:495px; height: 275px;"><div style="position: relative;"><div dir="ltr" style="position: relative; width: 900px; height: 500px;"><div aria-label="A chart." style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="900" height="500" aria-label="A chart." style="overflow: hidden;"><defs id="_ABSTRACT_RENDERER_ID_0"><clipPath id="_ABSTRACT_RENDERER_ID_1"><rect x="161" y="96" width="579" height="309"></rect></clipPath></defs><rect x="0" y="0" width="900" height="500" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="161" y="70.9" font-family="Arial" font-size="14" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Monthly Coffee Production by Country</text><rect x="161" y="59" width="579" height="14" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect></g><g><rect x="754" y="96" width="132" height="147" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><rect x="754" y="96" width="132" height="14" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="787" y="107.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#222222">Bolivia</text></g><rect x="754" y="96" width="28" height="14" stroke="none" stroke-width="0" fill="#3366cc"></rect></g><g><rect x="754" y="119" width="132" height="14" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="787" y="130.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#222222">Ecuador</text></g><rect x="754" y="119" width="28" height="14" stroke="none" stroke-width="0" fill="#dc3912"></rect></g><g><rect x="754" y="142" width="132" height="14" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="787" y="153.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#222222">Madagascar</text></g><rect x="754" y="142" width="28" height="14" stroke="none" stroke-width="0" fill="#ff9900"></rect></g><g><rect x="754" y="165" width="132" height="32" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="787" y="176.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#222222">Papua New</text><text text-anchor="start" x="787" y="194.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#222222">Guinea</text></g><rect x="754" y="165" width="28" height="14" stroke="none" stroke-width="0" fill="#109618"></rect></g><g><rect x="754" y="206" width="132" height="14" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="787" y="217.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#222222">Rwanda</text></g><rect x="754" y="206" width="28" height="14" stroke="none" stroke-width="0" fill="#990099"></rect></g><g><rect x="754" y="229" width="132" height="14" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="787" y="240.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#222222">Average</text></g><path d="M754,236L782,236" stroke="#0099c6" stroke-width="2" fill-opacity="1" fill="none"></path></g></g><g><rect x="161" y="96" width="579" height="309" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g clip-path="url(file:///C:/Users/tnawl/Downloads/googleChart%20(1).html#_ABSTRACT_RENDERER_ID_1)"><g><rect x="161" y="404" width="579" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="161" y="360" width="579" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="161" y="316" width="579" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="161" y="272" width="579" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="161" y="228" width="579" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="161" y="184" width="579" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="161" y="140" width="579" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="161" y="96" width="579" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="161" y="382" width="579" height="1" stroke="none" stroke-width="0" fill="#ebebeb"></rect><rect x="161" y="338" width="579" height="1" stroke="none" stroke-width="0" fill="#ebebeb"></rect><rect x="161" y="294" width="579" height="1" stroke="none" stroke-width="0" fill="#ebebeb"></rect><rect x="161" y="250" width="579" height="1" stroke="none" stroke-width="0" fill="#ebebeb"></rect><rect x="161" y="206" width="579" height="1" stroke="none" stroke-width="0" fill="#ebebeb"></rect><rect x="161" y="162" width="579" height="1" stroke="none" stroke-width="0" fill="#ebebeb"></rect><rect x="161" y="118" width="579" height="1" stroke="none" stroke-width="0" fill="#ebebeb"></rect></g><g><rect x="184" y="369" width="13" height="35" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="299" y="375" width="14" height="29" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="415" y="370" width="13" height="34" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="530" y="374" width="14" height="30" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="646" y="375" width="13" height="29" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="198" y="199" width="14" height="205" stroke="none" stroke-width="0" fill="#dc3912"></rect><rect x="314" y="159" width="13" height="245" stroke="none" stroke-width="0" fill="#dc3912"></rect><rect x="429" y="148" width="14" height="256" stroke="none" stroke-width="0" fill="#dc3912"></rect><rect x="545" y="161" width="13" height="243" stroke="none" stroke-width="0" fill="#dc3912"></rect><rect x="660" y="253" width="14" height="151" stroke="none" stroke-width="0" fill="#dc3912"></rect><rect x="213" y="290" width="13" height="114" stroke="none" stroke-width="0" fill="#ff9900"></rect><rect x="328" y="273" width="14" height="131" stroke="none" stroke-width="0" fill="#ff9900"></rect><rect x="444" y="276" width="13" height="128" stroke="none" stroke-width="0" fill="#ff9900"></rect><rect x="559" y="270" width="14" height="134" stroke="none" stroke-width="0" fill="#ff9900"></rect><rect x="675" y="267" width="13" height="137" stroke="none" stroke-width="0" fill="#ff9900"></rect><rect x="227" y="185" width="14" height="219" stroke="none" stroke-width="0" fill="#109618"></rect><rect x="343" y="126" width="13" height="278" stroke="none" stroke-width="0" fill="#109618"></rect><rect x="458" y="227" width="14" height="177" stroke="none" stroke-width="0" fill="#109618"></rect><rect x="574" y="192" width="13" height="212" stroke="none" stroke-width="0" fill="#109618"></rect><rect x="689" y="179" width="14" height="225" stroke="none" stroke-width="0" fill="#109618"></rect><rect x="242" y="306" width="13" height="98" stroke="none" stroke-width="0" fill="#990099"></rect><rect x="357" y="342" width="14" height="62" stroke="none" stroke-width="0" fill="#990099"></rect><rect x="473" y="318" width="13" height="86" stroke="none" stroke-width="0" fill="#990099"></rect><rect x="588" y="358" width="14" height="46" stroke="none" stroke-width="0" fill="#990099"></rect><rect x="704" y="324" width="13" height="80" stroke="none" stroke-width="0" fill="#990099"></rect></g><g><rect x="161" y="404" width="579" height="1" stroke="none" stroke-width="0" fill="#333333"></rect></g><g><path d="M219.3,269.288L334.9,254.46L450.5,267.44L566.0999999999999,270.432L681.6999999999999,279.188" stroke="#0099c6" stroke-width="2" fill-opacity="1" fill="none"></path></g></g><g></g><g><g><text text-anchor="middle" x="219.3" y="425.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#222222">2004/05</text></g><g><text text-anchor="middle" x="334.9" y="425.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#222222">2005/06</text></g><g><text text-anchor="middle" x="450.5" y="425.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#222222">2006/07</text></g><g><text text-anchor="middle" x="566.0999999999999" y="425.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#222222">2007/08</text></g><g><text text-anchor="middle" x="681.6999999999999" y="425.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#222222">2008/09</text></g><g><text text-anchor="end" x="147" y="409.4" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#444444">0</text></g><g><text text-anchor="end" x="147" y="365.4" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#444444">200</text></g><g><text text-anchor="end" x="147" y="321.4" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#444444">400</text></g><g><text text-anchor="end" x="147" y="277.4" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#444444">600</text></g><g><text text-anchor="end" x="147" y="233.4" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#444444">800</text></g><g><text text-anchor="end" x="147" y="189.4" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#444444">1,000</text></g><g><text text-anchor="end" x="147" y="145.4" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#444444">1,200</text></g><g><text text-anchor="end" x="147" y="101.4" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#444444">1,400</text></g></g></g><g><g><text text-anchor="middle" x="450.5" y="468.9" font-family="Arial" font-size="14" font-style="italic" stroke="none" stroke-width="0" fill="#222222">Month</text><rect x="161" y="457" width="579" height="14" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect></g><g><text text-anchor="middle" x="60.9" y="250.5" font-family="Arial" font-size="14" font-style="italic" transform="rotate(-90 60.9 250.5)" stroke="none" stroke-width="0" fill="#222222">Cups</text><path d="M48.99999999999999,405L49.00000000000001,96L63.00000000000001,96L62.99999999999999,405Z" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></path></g></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>Month</th><th>Bolivia</th><th>Ecuador</th><th>Madagascar</th><th>Papua New Guinea</th><th>Rwanda</th><th>Average</th></tr></thead><tbody><tr><td>2004/05</td><td>165</td><td>938</td><td>522</td><td>998</td><td>450</td><td>614.6</td></tr><tr><td>2005/06</td><td>135</td><td>1,120</td><td>599</td><td>1,268</td><td>288</td><td>682</td></tr><tr><td>2006/07</td><td>157</td><td>1,167</td><td>587</td><td>807</td><td>397</td><td>623</td></tr><tr><td>2007/08</td><td>139</td><td>1,110</td><td>615</td><td>968</td><td>215</td><td>609.4</td></tr><tr><td>2008/09</td><td>136</td><td>691</td><td>629</td><td>1,026</td><td>366</td><td>569.6</td></tr></tbody></table></div></div></div><div aria-hidden="true" style="display: none; position: absolute; top: 510px; left: 910px; white-space: nowrap; font-family: Arial; font-size: 14px;">Average</div><div></div></div></div>
-
-</body></html>
+<div id="piechart" style="width: 900px; height: 500px;"></div>
+</body>
+</html>

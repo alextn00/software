@@ -50,7 +50,7 @@
   </div> 
  </nav>
  
- <!-- 과목 추가 -->
+ <!-- 과목 추가
 <div class = "modal-dialog">
 	<div class = "modal-content">
 		<div class = "modal-header">
@@ -58,14 +58,14 @@
 			<button type = "button" class = "close" data-dismiss = "modal" aria-lable = "Close">
 			</button>
 		</div>
-		
+
 		<div class = "modal-body">
 			<form action = "course_check.jsp" method = "post">
 			<table width = "500" align = "center">
 					<th>학기구분</th>
 	                <th>평균학점</th>
 	                <th>취득학점</th>
-	               
+
 	                <tr>
 	                	<td><input type="text" class = "form-control" placeholder="4/8" disabled = "disabled"></td>
 	               		<td><input type="text" class = "form-control" placeholder="3.5/4.3" disabled = "disabled"></td>
@@ -73,7 +73,7 @@
 	               	</tr>
             	</table>
             	<br><br>
-            	
+
 				 <div class = "modal-footer">
 			    	<button type = "button" class = "btn btn-secondary"> 취소 </button>
 			    	<button type = "submit" class = "btn btn-primary"> 저장</button>
@@ -82,34 +82,9 @@
 		</div>
 	</div>
 </div>
- <div class="modal-dialog">
-     <div class="modal-content">
-         <div class="modal-header">
-             <h1 style="text-align: center;"></h1>
-             <button type="button" class="close" data-dismiss="modal" aria-lable="Close">
-             </button>
-         </div>
+-->
+ <jsp:include page="charttest.jsp" flush="false"/>
 
-         <div class="modal-body">
-             <form method="post">
-                 <table width="500" align="center">
-                     <tbody>
-                     <tr>
-                         <td>
-                             <jsp:include page="charttest.jsp" flush="false"/>
-                         </td>
-                     </tr>
-                     </tbody></table>
-                 <br><br>
-
-                 <div class="modal-footer">
-                     <button type="button" class="btn btn-secondary"> 취소 </button>
-                     <button type="submit" class="btn btn-primary"> 저장 </button>
-                 </div>
-             </form>
-         </div>
-     </div>
- </div>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
 <script src="js/bootstrap.js"></script>
 </body>

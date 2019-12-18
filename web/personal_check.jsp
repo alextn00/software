@@ -16,12 +16,12 @@
      graduation_requirement g = graduation_requirement.getInstance();
      field_practice a = new field_practice();
      String userID = null;
-     String birth = null;
+     String userPassword = null;
      //carceer.Curriculum_Career_input(request.getParameter("emailid"),request.getParameter("emailid"));
      String curri = null;
      String test = null;
      userID = (String)session.getAttribute("userID");
-     birth = (String)session.getAttribute("userPassword");
+     userPassword = (String)session.getAttribute("userPassword");
      student.setStudent_code(userID);
      student.setTrack();
      test = student.getStudent_code();
@@ -88,7 +88,7 @@
     <div class = "form-group">
       	학번 <input type="text" class = "form-control" name="id" placeholder="학번" maxlength="20" disabled = "disabled" value="<%= userID %>">
    		전공 <input type="text" class = "form-control" name="major" placeholder="전공" maxlength="20" disabled = "disabled" value="<%= curri %>">
-   		생년월일 <input type="text" class = "form-control" name="birth" placeholder="생년월일" maxlength="20" disabled = "disabled" value="<%= birth %>">
+   		생년월일 <input type="text" class = "form-control" name="birth" placeholder="생년월일" maxlength="20" disabled = "disabled" value="<%= userPassword %>">
    		이메일<input type="text" class = "form-control" name="email" placeholder="NANANANANA@naver.com" maxlength="20" disabled = "disabled">
    	</div>
    	

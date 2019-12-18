@@ -23,6 +23,7 @@
 	userID = (String)session.getAttribute("userID");
 	student.setStudent_code(userID);
 	d.read_alldata();
+
 	examScore = d.getExamScore();
 	//authorized_examName = d.getUserCode();
 

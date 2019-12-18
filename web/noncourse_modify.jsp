@@ -60,16 +60,8 @@
 		<div class = "modal-body">
 			<form action = "noncourese_modify.jsp" method = "post">
 				<div class = "form-row">
-						<input type="text" class = "form-control" name="english" placeholder="시험 종류와 성적을 입력하세요." maxlength="20" ><li>
+						<input type="text" class = "form-control" name="english" placeholder="토익점수 입력" maxlength="20" ><li>
 				</div>
-				
-				<div class = "form-row">
-						<input type="text" class = "form-control" name="volunteer" placeholder="봉사 일시, 기관, 시간을 입력하세요." maxlength="20"><li>
-	            </div>
-				
-				<div class = "form-row">
-						<input type="text" class = "form-control" name="license" placeholder="취득한 자격증 종류와 취득날짜를 입력하세요." maxlength="20"><li>
-   				</div>
    				
 				<div class = "form-row">
 						 <input type="text" class = "form-control" name="experience" placeholder="현장실습 기관과 기간을 입력하세요." maxlength="20"><li>
@@ -90,8 +82,8 @@
 				</div>
 				
             	<div class = "modal-footer">
-             		<button type = "button" class = "btn btn-secondary"> 취소 </button>
-             		<button type = "submit" class = "btn btn-primary"> 저장</button>
+             		<button type = "submit" class = "btn btn-secondary" onclick = "noncourse_check.jsp"> 취소 </button>
+             		<button type = "submit" class = "btn btn-primary" onclick = "noncourse_modify_action.jsp"> 저장</button>
           		</div>
 			</form>
 		</div>
