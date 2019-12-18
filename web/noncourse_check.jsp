@@ -64,18 +64,21 @@
 						영어 성적 정보<input type="text" class = "form-control" name="english" placeholder="TOEIC 900" maxlength="20" disabled = "disabled" >
 				</div>
    				
-				<div class = "form-row">
-						 현장실습 정보<input type="text" class = "form-control" name="experience" placeholder="XX, 2019-09~2019-12" maxlength="20" disabled = "disabled">
-				</div>
+   				<div class="form-group">
+
+           
+				<div>
+               		 현장실습 정보 <textarea type="text" name="experience" class="form-control" maxlength="2048" placeholder=" 삼성 2018-03-01 ~ 2018-06-03 &#13;&#10; LG 2019-06-01 ~ 2019-08-03 " style="height: 180px;" disabled = "disabled"></textarea>
+                </div>
 					
 				<div class = "form-row">
 						 상담 횟수<input type="text" class = "form-control" name="consult" placeholder=" 8 " maxlength="20" disabled = "disabled">
 				</div>
-
-				<!--<div class = "modal-footer">
-                    <button type = "button" class = "btn btn-secondary"> 취소 </button>
-                    <button type = "submit" class = "btn btn-primary"> 저장</button>
-                </div> -->
+				
+            	<div class = "modal-footer">
+             		<button type = "button" class = "btn btn-secondary"> 취소 </button>
+             		<button type = "submit" class = "btn btn-primary"> 저장</button>
+          		</div>
 			</form>
 		</div>
 	</div>
