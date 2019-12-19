@@ -1,9 +1,15 @@
- <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
- <%@ page import="curriculum_career.student_career" %>
- <%@ page import="java.io.PrintWriter" %> <!-- 자바 클래스 사용 -->
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
+<%@ page import="student.Student" %>
 <!DOCTYPE html>
+<%
+    Student student = new Student();
+    String userID = null;
+    userID = (String)session.getAttribute("userID");
+    student.setStudent_code(userID);
+    student.setUserInformation();
 
+%>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -33,7 +39,7 @@
          <ul class="nav navbar-nav">
              <!-- Link 메뉴 -->
              <li><a href="personal_check.jsp">개인정보확인</a></li>
-             <li><a href="course_check.jsp">학적정보확인</a></li>
+             <li><a href="course_check.jsp">교과정보확인</a></li>
              <li><a href="graduation_criteria.jsp">졸업요건충족확인</a></li>
              <li><a href="logout.jsp">로그아웃</a></li>
              <!-- DropDown 형식의 메뉴 -->
@@ -50,7 +56,6 @@
              </li>
          </ul>
      </div>
-     </div>
  </nav>
 
  <!-- 개인정보확인 -->
@@ -63,12 +68,12 @@
     <h3 style="text-align: center;"> 개인정보 수정 </h3>
     
     <div class = "form-group">
-      	학번 <input type="text" class = "form-control" name="id" placeholder="2018111111" maxlength=20 disabled = "disabled">
+      	학번 <input type="text" class = "form-control" name="id" placeholder="stuNum" maxlength=20 disabled = "disabled"value="<%= userID %>">
     	변경할 비밀번호 <input type="password"  class = "form-control" name="userPassword" maxlength="20">
-   		이름 <input type = "text" class = "form-control" name = "name" maxlength = "20">
+   		이름 <input type = "text" class = "form-control" name = "John Doe" maxlength = "20">
    		전공 <select name = "major" class = "form-control">
    			<option value = ""> 선택 </option>
-   			<option value="01" >심화컴퓨터공학전공</option>
+   			<option value="01">심화컴퓨터공학전공</option>
             <option value="02" >글로벌SW전공-다중전공트랙</option>
             <option value="03" >글로벌SW전공-해외복수학위트랙</option>
             <option value="04" >글로벌SW전공-학석사연계트랙</option>
@@ -83,28 +88,12 @@
             <option value="13" >외국인-복수전공</option>
             <option value="14" >외국인-교환전공</option>
    			</select>
-   		생년월일 <input type="text" class = "form-control" name="birth" placeholder="19980510" maxlength=20 disabled = "disabled">
+   		생년월일 <input type="text" class = "form-control" name="birth" placeholder="19980510" maxlength=20>
+        이메일
+        <input type="text" class = "form-control" name="emailid" placeholder="JohnDoe@gmail.com" maxlength=20>
    	</div>
    	
-   	<div class = "form-row">
-		<div class = "form-group col-sm-6">
-			이메일
-			<input type = "text" name = "emailid" class = "form-control"> 
-		</div>
-		
-		<div class = "form-group col-sm-6">
-			이메일 주소
-			<select name = "page" class = "form-control">
-	   		<option value = ""> 이메일 주소 선택 </option>
-	   		<option>@naver.com</option>
-	   		<option>@gmail.com</option>
-	   		<option>@knu.ac.kr</option>
-	   		</select>	
-	    </div>
-	</div>
-   	
     <div class = "modal-footer">
-    	<button type = "button" class = "btn btn-secondary"> 취소 </button>
     	<button type = "submit" class = "btn btn-primary"> 저장</button>
     </div>
     

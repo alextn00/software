@@ -6,7 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5413a6ef-df38-45e5-ac61-53c67da63b2a" name="Default Changelist" comment="1219 first commit">
+    <list default="true" id="5413a6ef-df38-45e5-ac61-53c67da63b2a" name="Default Changelist" comment="1219 final commit">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver10.war" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war/1130ver11.war" beforeDir="false" />
@@ -47,35 +48,55 @@
       <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/WEB-INF/classes/user/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/WEB-INF/classes/user/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/WEB-INF/classes/user/UserDAO$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/WEB-INF/classes/user/UserDAO$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/WEB-INF/classes/user/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/WEB-INF/classes/user/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/WEB-INF/classes/user/test$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/WEB-INF/classes/user/test$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/WEB-INF/classes/user/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/WEB-INF/classes/user/test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/WEB-INF/classes/user/test$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/WEB-INF/classes/user/test.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/charttest.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/charttest.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/course_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/course_add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/course_check.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/course_check.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/graduation_criteria.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/graduation_criteria.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/join.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/joinAction.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/loginAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/loginAction.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/logout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/logout.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/noncourse_check.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/noncourse_check.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/noncourse_modify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/noncourse_modify.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/password_find.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/personal_check.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/personal_check.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/personal_modify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/personal_modify.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/pwfind.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/summary.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/summary.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/webSoftware_war_exploded/tt.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/webSoftware/user/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webSoftware/user/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/webSoftware/user/UserDAO$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webSoftware/user/UserDAO$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/webSoftware/user/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webSoftware/user/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/webSoftware/user/test$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webSoftware/user/test$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/webSoftware/user/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webSoftware/user/test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Data_nonSubject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Data_nonSubject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/webSoftware/user/test$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/webSoftware/user/test.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Data/data_curriculum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/data_curriculum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/graduation_requirement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/graduation_requirement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/carrer/nonSubject/authorizedEnglish_score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrer/nonSubject/authorizedEnglish_score.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/carrer/nonSubject/counseling_history.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrer/nonSubject/counseling_history.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/carrer/nonSubject/field_practice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrer/nonSubject/field_practice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/carrer/nonSubject/nonSubjectActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrer/nonSubject/nonSubjectActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/curriculum_career/student_career.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/curriculum_career/student_career.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/student/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/course_add_action.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/charttest.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/charttest.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/course_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/course_add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/course_check.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/course_check.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/graduation_criteria.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/graduation_criteria.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/join.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/joinAction.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/loginAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/loginAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/logout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/logout.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/noncourse_check.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/noncourse_check.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/noncourse_modify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/noncourse_modify.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/noncourse_modify_action.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/noncourse_modify_action.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/password_find.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/personal_check.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/personal_check.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/personal_modify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/personal_modify.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/pwfind.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/summary.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/summary.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/tt.jsp" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -155,7 +176,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.noncourse_modify_action.jsp">
+  <component name="RunManager" selected="Tomcat Server.course_check.jsp">
     <configuration name="personal_check.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8000/services/personal_check.jsp">
       <method v="2" />
     </configuration>
@@ -235,6 +256,86 @@
     </configuration>
     <configuration name="charttest.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 7.0.96" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/charttest.jsp" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="webSoftware:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+        <artifact name="webSoftware:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/webSoftware_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_webSoftware" />
+        <option name="HTTP_PORT" value="8000" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="1465" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="webSoftware:war exploded" />
+          <artifact name="webSoftware:war" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="course_check.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 7.0.96" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/course_check.jsp" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="webSoftware:war exploded">
@@ -467,100 +568,20 @@
         </option>
       </method>
     </configuration>
-    <configuration name="personal_check.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 7.0.96" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/personal_check.jsp" />
-      <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment>
-        <artifact name="webSoftware:war exploded">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-        <artifact name="webSoftware:war">
-          <settings>
-            <option name="CONTEXT_PATH" value="/webSoftware_war" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="_webSoftware" />
-        <option name="HTTP_PORT" value="8000" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="1465" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="webSoftware:war exploded" />
-          <artifact name="webSoftware:war" />
-        </option>
-      </method>
-    </configuration>
     <list>
       <item itemvalue="JavaScript Debug.personal_check.jsp" />
       <item itemvalue="Tomcat Server.index.jsp" />
-      <item itemvalue="Tomcat Server.personal_check.jsp" />
       <item itemvalue="Tomcat Server.charttest.jsp" />
       <item itemvalue="Tomcat Server.noncourse_modify_action.jsp" />
+      <item itemvalue="Tomcat Server.course_check.jsp" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Tomcat Server.course_check.jsp" />
         <item itemvalue="Tomcat Server.noncourse_modify_action.jsp" />
         <item itemvalue="Tomcat Server.charttest.jsp" />
         <item itemvalue="JavaScript Debug.personal_check.jsp" />
         <item itemvalue="Tomcat Server.index.jsp" />
-        <item itemvalue="Tomcat Server.personal_check.jsp" />
       </list>
     </recent_temporary>
   </component>
@@ -603,7 +624,7 @@
       <workItem from="1576565903347" duration="17849000" />
       <workItem from="1576632482210" duration="636000" />
       <workItem from="1576643631180" duration="7279000" />
-      <workItem from="1576644232696" duration="16030000" />
+      <workItem from="1576644232696" duration="39536000" />
     </task>
     <task id="LOCAL-00001" summary="1125ver2">
       <created>1574689557681</created>
@@ -696,7 +717,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576687373842</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="1219 second commit. source code end. connection start">
+      <created>1576693267357</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1576693267357</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -727,7 +755,9 @@
     <MESSAGE value="1217 ver3. pjw" />
     <MESSAGE value="1218 main change. for submit, add action jsp by pjw" />
     <MESSAGE value="1219 first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="1219 first commit" />
+    <MESSAGE value="1219 second commit. source code end. connection start" />
+    <MESSAGE value="1219 final commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="1219 final commit" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/dd$personal_check_jsp.dat" NAME="personal_check.jsp Coverage Results" MODIFIED="1576566623918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

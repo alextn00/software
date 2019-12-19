@@ -1,35 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 		 pageEncoding="UTF-8"%>
 <%@ page import="student.Student" %>
-<%@ page import="user.User" %>
 <%@ page import="Data.*" %>
-<%@ page import="carrer.nonSubject.field_practice" %>
-
-<%@ page import="java.io.PrintWriter" %> <!-- 자바 클래스 사용 -->
+<!-- 자바 클래스 사용 -->
 <!DOCTYPE html>
 <%
-	User user= new User();
 	Student student = Student.getInstance();
 	Data_nonSubject d = Data_nonSubject.getInstance();
-	data_curriculum p = data_curriculum.getInstance();
-	graduation_requirement g = graduation_requirement.getInstance();
-	field_practice a = new field_practice();
 	String userID = null;
-	int examScore = 0;
-	//int counseling_number = 0;
-	//int field_credit = 0;
-	//int examCnt = 0;
-	//String authorized_examName = null;
-	userID = (String)session.getAttribute("userID");
-	student.setStudent_code(userID);
-	d.read_alldata();
-	String engscore = request.getParameter("english");
-	String consult = request.getParameter("consult");
-
-	examScore = d.getExamScore();
-	//authorized_examName = d.getUserCode();
-
-
+	userID = (String)session.getAttribute("userID"); //세션에 있는 userID get.
+	student.setStudent_code(userID); // student에 학번 넘겨줌
+	d.read_alldata(); //파일 읽어오기
+	int engscore = d.getExamScore();
+	int consult = d.getCounseling_number();
+	String experiment[] = d.getField_content();
 %>
 <html>
 <head>
@@ -38,7 +22,6 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<title>학생경력관리시스템</title>
 </head>
-
 <body>
  <!-- 네비게이션 -->
  <nav class="navbar navbar-default">
@@ -57,7 +40,7 @@
 		 <ul class="nav navbar-nav">
 			 <!-- Link 메뉴 -->
 			 <li><a href="personal_check.jsp">개인정보확인</a></li>
-			 <li><a href="course_check.jsp">학적정보확인</a></li>
+			 <li><a href="course_check.jsp">교과정보확인</a></li>
 			 <li><a href="graduation_criteria.jsp">졸업요건충족확인</a></li>
 			 <li><a href="logout.jsp">로그아웃</a></li>
 			 <!-- DropDown 형식의 메뉴 -->
@@ -77,34 +60,36 @@
 		 </ul>
 	 </div>
  </nav>
- 
  <!-- 과목 추가 -->
 <div class = "modal-dialog">
 	<div class = "modal-content">
 		<div class = "modal-header">
 			<h1 style="text-align: center;">비교과 확인</h1>
-			<button type = "button" class = "close" data-dismiss = "modal" aria-lable = "Close">
+			<button type = "button" class = "close" data-dismiss = "modal" aria-label="Close">
 			</button>
 		</div>
-		
 		<div class = "modal-body">
-			<form action = "noncourese_modify.jsp" method = "post">
+			<form action = "noncourse_modify.jsp" method = "post">
 				<div class = "form-row">
 						토익성적<input type="text" class = "form-control" name="english" placeholder="TOEIC" maxlength="20" disabled = "disabled" value="<%= engscore %>">
 				</div>
-   				
-				<div class = "form-row">
-						 현장실습 정보<input type="text" class = "form-control" name="experience" placeholder="없음" maxlength="20" disabled = "disabled" value="<%= consult %>">
+				현장학습
+				<form>
+					<% for(int idx=1; idx < experiment.length; idx++) { // jsp 속에서 for문 사용
+					%>
+					<input type="text" class = "form-control" name="experience" placeholder="없음" maxlength="50" disabled = "disabled" value="<%= experiment[idx] %>">
+					<%
+						}
+					%>
+				</form>
+				<div>
 				</div>
-					
 				<div class = "form-row">
-						 상담 횟수<input type="text" class = "form-control" name="consult" placeholder="없음" maxlength="20" disabled = "disabled">
+						 상담 횟수<input type="text" class = "form-control" name="consult" placeholder="없음" maxlength="20" disabled = "disabled" value="<%= consult %>">
 				</div>
-
-				<!--<div class = "modal-footer">
-                    <button type = "button" class = "btn btn-secondary"> 취소 </button>
-                    <button type = "submit" class = "btn btn-primary"> 저장</button>
-                </div> -->
+				<div class = "modal-footer">
+                    <button type = "submit" class = "btn btn-primary" onclick = "noncourse_modify.jsp"> 수정 </button>
+                </div>
 			</form>
 		</div>
 	</div>

@@ -29,9 +29,5 @@ public class User {
     public void setUserEmail(String userEmail) {
         this.userEmail = userEmail;
     }
-
-    public String print_a(String email) {
-        return email;
-    }
 }
 

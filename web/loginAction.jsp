@@ -3,8 +3,7 @@
 <%@ page import="user.UserDAO" %> <!-- userdao의 클래스 가져옴 -->
 <%@ page import="java.io.PrintWriter" %> <!-- 자바 클래스 사용 -->
 <%@ page buffer="100kb" %>
-<!-- request.setCharacterEncoding("UTF-8"); -->
-<!-- 한명의 회원정보를 담는 user클래스를 자바 빈즈로 사용 / scope:페이지 현재의 페이지에서만 사용-->
+<!-- 한명의 회원정보를 담는 user클래스를 자바 빈즈로 사용 / scope:session-->
 <jsp:useBean id="user" class="user.User" scope="session" />
 <jsp:setProperty name="user" property="userID" />
 <jsp:setProperty name="user" property="userPassword" />
@@ -17,7 +16,6 @@
 <body>
 <%
     try {
-
         UserDAO userDAO = new UserDAO(); //인스턴스생성
         user.setUserID(user.getUserID());
         int result = userDAO.login(user.getUserID(), user.getUserPassword());

@@ -1,9 +1,7 @@
 package user;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -15,7 +13,6 @@ public class UserDAO {
     }
     // 로그인을 시도하는 함수****
     public int login(String userID, String userPassword) throws IOException {
-
        FileInputStream file = new FileInputStream("/volume1/Tomcat/excelLoginFile.xlsx");
         workbook = new XSSFWorkbook(file);
         int cnt1 = 0;

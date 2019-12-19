@@ -40,6 +40,11 @@ public class student_career {
     String curriculum_classification; //교과구분
     String grade; //성적
     String subject_name; //과목명
+    String subject_code;//과목코드
+    String course_semester;
+    double average_grade;
+    double average_grade2=0;
+
 
     public static student_career getInstance()  {
         if (sc == null)
@@ -51,6 +56,7 @@ public class student_career {
         data = data.getInstance();
         gr = graduation_requirement.getInstance();
         stu = Student.getInstance();
+        Curriculum_Career_Read();
     }
 
     public boolean isGraduation_check() {
@@ -65,14 +71,27 @@ public class student_career {
         all_creadit = data.getAll_creadit();//총이수학점
         global_capability = data.getGlobal_capability();
         startup_capability = data.getStartup_capability();
+        average_grade=data.getAverage_grade();
         track = stu.getTrack();
     }
 
-    public void Curriculum_Career_Input()//교과 경력 입력
+    public void Curriculum_Career_Input()//교과 경력 입력,수정
     {
-        subject_name = keyboard.nextLine(); //과목명
-        curriculum_classification = keyboard.nextLine(); //교과구분
-        grade = keyboard.nextLine();//성적
+        String credit_temp;
+        course_semester=keyboard.nextLine();
+        curriculum_classification=keyboard.nextLine();
+        subject_code=keyboard.nextLine();
+        credit_temp=keyboard.nextLine();
+        credit=Integer.parseInt(credit_temp);
+
+        grade=keyboard.nextLine();
+        subject_name=keyboard.nextLine();
+
+
+
+
+
+
 
         try {
             FileInputStream file = new FileInputStream("/volume1/Tomcat/학생경력정보.xlsx");
@@ -86,30 +105,69 @@ public class student_career {
                     XSSFCell cell = row.getCell(1);//학번 비교하기
                     String value = cell.getStringCellValue() + "";
                     System.out.println(value);
+                    double cnt=0;
                     if (value.equals(stu.getStudent_code())) {
                         XSSFCell num_cell = row.getCell(0);//몇번째 시트인지 찾기
                         String work_value = num_cell.getStringCellValue() + "";
                         XSSFSheet work_sheet = workbook.getSheetAt(Integer.parseInt(work_value));//시트 도착
                         int work_rows = work_sheet.getPhysicalNumberOfRows(); // 해당 시트의 행의 개수
                         for (int i = 0; i < work_rows; i++) {
+                            cnt++;
                             XSSFRow work_row = work_sheet.getRow(i);
-                            XSSFCell work_cell = work_row.getCell(11);
+                            XSSFCell work_cell = work_row.getCell(14);
                             String s = work_cell.getStringCellValue() + "";
+                            XSSFCell grade_cell = work_row.getCell(16);
+                            String s1 = grade_cell.getStringCellValue() + "";
+
                             if (s.equals(null) || s.equals("")) {
+                                work_cell= work_row.getCell(11);
                                 work_cell.setCellValue(subject_name);
                                 work_cell = work_row.getCell(12);
                                 work_cell.setCellValue(Integer.toString(credit));
                                 work_cell = work_row.getCell(13);
                                 work_cell.setCellValue(curriculum_classification);
+                                work_cell = work_row.getCell(14);
+                                work_cell.setCellValue(subject_code);
+                                work_cell = work_row.getCell(15);
+                                work_cell.setCellValue(course_semester);
+                                work_cell = work_row.getCell(16);
+                                work_cell.setCellValue(grade);
+                                //work_cell = work_row.getCell(20);
+                                average_grade2+=grade_check(grade);
+                                XSSFRow grade_row=work_sheet.getRow(1);
+                                grade_cell=grade_row.getCell(20);
+                                grade_cell.setCellValue(Double.toString(average_grade2/(cnt-1)));
+                                break;
+                            }
+                            average_grade2+=grade_check(s1);
+                            if(s.equals(subject_code)==true)
+                            {
+                                cnt = (double)data.getGrade().length;
+                                work_cell= work_row.getCell(11);
+                                work_cell.setCellValue(subject_name);
+                                work_cell = work_row.getCell(12);
+                                work_cell.setCellValue(Integer.toString(credit));
+                                work_cell = work_row.getCell(13);
+                                work_cell.setCellValue(curriculum_classification);
+                                work_cell = work_row.getCell(14);
+                                work_cell.setCellValue(subject_code);
+                                work_cell = work_row.getCell(15);
+                                work_cell.setCellValue(course_semester);
+                                work_cell = work_row.getCell(16);
+                                work_cell.setCellValue(grade);
+                                //work_cell = work_row.getCell(20);
+                                XSSFRow grade_row=work_sheet.getRow(1);
+                                grade_cell=grade_row.getCell(20);
+                                grade_cell.setCellValue(Double.toString((average_grade*cnt-Double.parseDouble(s1)+grade_check(grade))/cnt));
                                 break;
                             }
                         }
+
                         break;
                     }
+
                 }
             }
-
-
             file.close();
             data.setter();
             try {
@@ -126,57 +184,6 @@ public class student_career {
             e.printStackTrace();
         }
     }
-
-    public void Curriculum_Career_Modify()//교과 경력 수정,과목명을 입력받으면 학점을 고치게함
-    {
-        try {
-            FileInputStream file = new FileInputStream("/volume1/Tomcat/졸업요건.xlsx");
-            XSSFWorkbook workbook = new XSSFWorkbook(file);
-
-            XSSFSheet sheet = workbook.getSheetAt(0);     // sheet index
-            int rows = sheet.getPhysicalNumberOfRows(); // 해당 시트의 행의 개수
-            for (int rowIndex = 0; rowIndex < rows; rowIndex++) {
-                XSSFRow row = sheet.getRow(rowIndex); // 각 행을 읽어온다
-                if (row != null) {
-                    XSSFCell cell = row.getCell(1);//학번 비교하기
-                    String value = cell.getStringCellValue() + "";
-                    if (value.equals(stu.getStudent_code())) {
-                        XSSFCell num_cell = row.getCell(0);//몇번째 시트인지 찾기
-                        String work_value = num_cell.getNumericCellValue() + "";
-                        XSSFSheet work_sheet = workbook.getSheetAt(Integer.parseInt(work_value));//시트 도착
-                        int work_rows = work_sheet.getPhysicalNumberOfRows(); // 해당 시트의 행의 개수
-                        for (int i = 0; i < work_rows; i++) {
-                            XSSFRow work_row = work_sheet.getRow(i);
-                            XSSFCell work_cell = work_row.getCell(11);
-                            String s = work_cell.getStringCellValue() + "";
-                            if (s.equals(subject_name)) {
-                                work_cell = work_row.getCell(12);
-                                work_cell.setCellValue(Integer.toString(credit));
-                            }
-                        }
-                        break;
-                    }
-                }
-
-            }
-            file.close();
-            data.setter();
-
-            try {
-                FileOutputStream fileoutputstream = new FileOutputStream("/volume1/Tomcat/졸업요건.xlsx");
-                workbook.write(fileoutputstream);
-                fileoutputstream.close();
-                System.out.println("엑셀파일생성성공");
-            } catch (IOException e) {
-                e.printStackTrace();
-                System.out.println("엑셀파일생성실패");
-            }
-        }
-        catch(Exception e){
-            e.printStackTrace();
-        }
-    }
-
     public void Studied_Creadit_Update()//이수학점 업데이트
     {
         try {
@@ -194,31 +201,11 @@ public class student_career {
                         XSSFCell num_cell = row.getCell(0);//몇번째 시트인지 찾기
                         String work_value = num_cell.getNumericCellValue() + "";
                         XSSFSheet work_sheet = workbook.getSheetAt(Integer.parseInt(work_value));//시트 도착
+
                         XSSFRow work_row = work_sheet.getRow(1);             // row index
-                        XSSFCell work_cell = work_row.getCell(1);
-                        String s = work_cell.getStringCellValue() + "";
-                        if (s.equals(null) || s.equals("")) {//총이수학점 0이면 나머지 0이다.
-                            refinement_credit = 0; //교양과목 이수학점
-                            base_refinement_credit = 0;//기본소양 이수학점
-                            majorbase_credit = 0; //전공기반 이수학점
-                            major_credit = 0; //전공 이수학점
-                            all_creadit = 0;//총이수학점
-                        } else//파일에잇는 정보 가져오기
-                        {
-                            all_creadit = (int) Double.parseDouble(s);
-                            work_cell = work_row.getCell(2);
-                            s = work_cell.getStringCellValue() + "";
-                            refinement_credit = Integer.parseInt(s);
-                            work_cell = work_row.getCell(3);
-                            s = work_cell.getStringCellValue() + "";
-                            base_refinement_credit = Integer.parseInt(s);
-                            work_cell = work_row.getCell(4);
-                            s = work_cell.getStringCellValue() + "";
-                            majorbase_credit = Integer.parseInt(s);
-                            work_cell = work_row.getCell(5);
-                            s = work_cell.getStringCellValue() + "";
-                            major_credit = Integer.parseInt(s);
-                        }
+                        XSSFCell work_cell = work_row.getCell(13);
+                        //String s = work_cell.getStringCellValue() + "";
+
                         if (curriculum_classification.equals("전공기반"))//L index 11
                         {
                             all_creadit += credit;
@@ -228,9 +215,7 @@ public class student_career {
                             work_cell.setCellValue(Double.toString(all_creadit));
                             work_cell = work_row.getCell(5);
                             work_cell.setCellValue(Double.toString(majorbase_credit));
-
-
-                        } else if (curriculum_classification.equals("전공"))//N index 13
+                        } else if (curriculum_classification.equals("공학전공"))//N index 13
                         {
                             all_creadit += credit;
                             major_credit += credit;
@@ -258,8 +243,8 @@ public class student_career {
                             work_cell = work_row.getCell(3);
                             work_cell.setCellValue(Double.toString(base_refinement_credit));
                         }
-                    }
 
+                    }
                 }
                 break;
             }
@@ -279,6 +264,61 @@ public class student_career {
         }
         catch(Exception e){
             e.printStackTrace();
+        }
+    }
+    public double grade_check(String s)
+    {
+        if(s.equals("A+")==true)
+        {
+            return 4.3;
+        }
+        else if(s.equals("A")==true)
+        {
+            return 4.0;
+        }
+        else if(s.equals("A-")==true)
+        {
+            return 3.7;
+        }
+        else if(s.equals("B+")==true)
+        {
+            return 3.3;
+        }
+        else if(s.equals("B")==true)
+        {
+            return 3.0;
+        }
+        else if(s.equals("B-")==true)
+        {
+            return 2.7;
+        }
+        else if(s.equals("C+")==true)
+        {
+            return 2.3;
+        }
+        else if(s.equals("C")==true)
+        {
+            return 2.0;
+        }
+        else if(s.equals("C-")==true)
+        {
+            return 1.7;
+        }
+        else if(s.equals("D+")==true)
+        {
+            return 1.3;
+        }
+        else if(s.equals("D")==true)
+        {
+            return 1.0;
+        }
+        else if(s.equals("D-")==true)
+        {
+            return 0.7;
+        }
+        else//F
+        {
+            return 0;
         }
     }
 
@@ -316,21 +356,27 @@ public class student_career {
 
             if (all_creadit >= 150){ //총이수
                 all_creadit_pass = true;
+                System.out.println("총학점 pass");
             }
             if (base_refinement_credit >= 15){ //기본소양
                 base_refinement_credit_pass = true;
+                System.out.println("기본소양 pass");
             }
             if (majorbase_credit >= 22){ //전공기반
                 majorbase_credit_pass = true;
+                System.out.println("전공기반 pass");
             }
             if (major_credit >= 75){ //전공
                 major_credit_pass = true;
+                System.out.println("전공 pass");
             }
             if(check_essential_major()){//필수전공 체크
                 essential_major_pass = true;
+                System.out.println("필수전공 pass");
             }
             if(check_essential_majorbase()){//필수전공기반 체크
                 essential_majorbase_pass = true;
+                System.out.println("필수전공기반 pass");
             }
             if(all_creadit_pass && base_refinement_credit_pass && majorbase_credit_pass && major_credit_pass && essential_major_pass && essential_majorbase_pass ){
                 graduation_check = true;
@@ -477,7 +523,7 @@ public class student_career {
         this.refinement_credit = refinement_credit;
     }
 
-    public double getRefinement_credit() {
+    public double getRefinement_credit() {//
         return refinement_credit;
     }
 
@@ -497,11 +543,43 @@ public class student_career {
         return grade;
     }
 
+    public void setBase_refinement_credit(double base_refinement_credit) {
+        this.base_refinement_credit = base_refinement_credit;
+    }
+
+    public double getBase_refinement_credit() {
+        return base_refinement_credit;
+    }
+
     public void setSubject_name(String subject_name) {
         this.subject_name = subject_name;
     }
 
     public String getSubject_name() {
         return subject_name;
+    }
+
+    public void setSubject_code(String subject_code) {
+        this.subject_code = subject_code;
+    }
+
+    public String getSubject_code() {
+        return subject_code;
+    }
+
+    public void setCredit(int credit) {
+        this.credit = credit;
+    }
+
+    public int getCredit() {
+        return credit;
+    }
+
+    public void setCourse_semester(String course_semester) {
+        this.course_semester = course_semester;
+    }
+
+    public String getCourse_semester() {
+        return course_semester;
     }
 }

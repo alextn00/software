@@ -1,22 +1,12 @@
-        <%--
-  Created by IntelliJ IDEA.
-  User: tnawl
-  Date: 2019-11-30
-  Time: 오후 8:27
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
-<%@ page import="java.io.*, org.apache.poi.hssf.usermodel.*, Data.*" %><!-- 클래스 import -->
+<%@ page import="Data.*" %><!-- 클래스 import -->
 <%@ page buffer="100kb" %>
 <%@ page import="student.Student" %>
-<%@ page import="user.User" %>
-<%@ page import="Data.*" %>
 <%@ page import="carrer.nonSubject.field_practice" %>
 <%
     int engscore = 0;
-
-
     try {
         Student student = Student.getInstance(); //인스턴스 생성
         Data_nonSubject d = Data_nonSubject.getInstance();
@@ -63,7 +53,7 @@
             var options = {
                 legend: 'none',
                 pieSliceText: 'label',
-                title: '학점',
+                title: '',
                 pieStartAngle: 100,
                 chartArea:{left:0,top:20,width:"80%",height:"80%"}
             };

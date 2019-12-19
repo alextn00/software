@@ -1,5 +1,3 @@
-//// data_curriculum.java 파일
-
 package Data;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
@@ -9,14 +7,11 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.FileInputStream;
 import java.util.Arrays;
-import java.util.Scanner;
 
 
 import student.*;
 
 public class data_curriculum {
-    Scanner keyboard = new Scanner(System.in);
-
     //------------클래스 객체----------//
     private static data_curriculum curriculum;
     Student stu;
@@ -36,7 +31,7 @@ public class data_curriculum {
     private String[] subject_code; //과목코드
     private String[] course_semester; // 연도/학기
     private String[] grade; // 성적
-
+    private double average_grade; // 학점평점
     public static data_curriculum getInstance() {
 
         if(curriculum==null)
@@ -106,6 +101,10 @@ public class data_curriculum {
             s = String.valueOf(cell);
             if (!s.equals(""))
                 startup_capability = Double.parseDouble(cell.getStringCellValue() + "");  // 창업 역량 학점
+            cell = row.getCell(20);
+            s = String.valueOf(cell);
+            if (!s.equals(""))
+                average_grade = Double.parseDouble(cell.getStringCellValue() + "");  // 학점평점
 
             subject_name = ary_setter(workbook, work_value, 11);      //과목명
             credit = ary_setter(workbook, work_value, 12);     //학점
@@ -185,27 +184,11 @@ public class data_curriculum {
         return curriculum_classification;
     }
 
-    public String[] getSubject_code() {
-        return subject_code;
-    }
+    public String[] getSubject_code() { return subject_code; }
 
-    public void setSubject_code(String[] subject_code) {
-        this.subject_code = subject_code;
-    }
+    public String[] getCourse_semester() { return course_semester; }
 
-    public String[] getCourse_semester() {
-        return course_semester;
-    }
+    public String[] getGrade() { return grade; }
 
-    public void setCourse_semester(String[] course_semester) {
-        this.course_semester = course_semester;
-    }
-
-    public String[] getGrade() {
-        return grade;
-    }
-
-    public void setGrade(String[] grade) {
-        this.grade = grade;
-    }
+    public double getAverage_grade() { return average_grade; }
 }

@@ -26,7 +26,7 @@
 		<ul class="nav navbar-nav">
 			<!-- Link 메뉴 -->
 			<li><a href="personal_check.jsp">개인정보확인</a></li>
-			<li><a href="course_check.jsp">학적정보확인</a></li>
+			<li><a href="course_check.jsp">교과정보확인</a></li>
 			<li><a href="graduation_criteria.jsp">졸업요건충족확인</a></li>
 			<li><a href="logout.jsp">로그아웃</a></li>
 			<!-- DropDown 형식의 메뉴 -->
@@ -115,7 +115,7 @@
       					 상담 횟수 <input type="text" class = "form-control" name="consult" placeholder="충족" maxlength="20" disabled = "disabled">
   					</div>
 				</div>
-				            
+
             	<div class = "modal-footer">
 
              		<button type = "submit" class = "btn btn-primary"> 확인</button>

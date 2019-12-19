@@ -26,7 +26,7 @@
 	 <div class="collapse navbar-collapse" id="#bs-example-navbar-collapse-1">
 		 <ul class="nav navbar-nav">
 			 <li><a href="personal_check.jsp">개인정보확인</a></li>
-			 <li><a href="course_check.jsp">학적정보확인</a></li>
+			 <li><a href="course_check.jsp">교과정보확인</a></li>
 			 <li><a href="graduation_criteria.jsp">졸업요건충족확인</a></li>
 			 <li><a href="logout.jsp">로그아웃</a></li>
 		 </ul>

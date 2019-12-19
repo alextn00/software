@@ -28,7 +28,7 @@
          <ul class="nav navbar-nav">
              <!-- Link 메뉴 -->
              <li><a href="personal_check.jsp">개인정보확인</a></li>
-             <li><a href="course_check.jsp">학적정보확인</a></li>
+             <li><a href="course_check.jsp">교과정보확인</a></li>
              <li><a href="graduation_criteria.jsp">졸업요건충족확인</a></li>
              <li><a href="logout.jsp">로그아웃</a></li>
              <!-- DropDown 형식의 메뉴 -->
@@ -48,40 +48,7 @@
          </ul>
      </div>
  </nav>
- 
- <!-- 과목 추가
-<div class = "modal-dialog">
-	<div class = "modal-content">
-		<div class = "modal-header">
-			<h1 style="text-align: center;">요약</h1>
-			<button type = "button" class = "close" data-dismiss = "modal" aria-lable = "Close">
-			</button>
-		</div>
-
-		<div class = "modal-body">
-			<form action = "course_check.jsp" method = "post">
-			<table width = "500" align = "center">
-					<th>학기구분</th>
-	                <th>평균학점</th>
-	                <th>취득학점</th>
-
-	                <tr>
-	                	<td><input type="text" class = "form-control" placeholder="4/8" disabled = "disabled"></td>
-	               		<td><input type="text" class = "form-control" placeholder="3.5/4.3" disabled = "disabled"></td>
-	               		<td><input type="text" class = "form-control" placeholder="70/150" disabled = "disabled"></td>
-	               	</tr>
-            	</table>
-            	<br><br>
-
-				 <div class = "modal-footer">
-			    	<button type = "button" class = "btn btn-secondary"> 취소 </button>
-			    	<button type = "submit" class = "btn btn-primary"> 저장</button>
-			    </div>
-			</form>
-		</div>
-	</div>
-</div>
--->
+ 학점
  <jsp:include page="charttest.jsp" flush="false"/>
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 

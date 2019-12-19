@@ -22,7 +22,7 @@ public class Student { // singleTorn
 
 
     public Student() {
-        this.track = "";
+        this.track = "public student return";
         this.student_code = "";
         this.pw = "";
         this.user_name="";
@@ -57,7 +57,7 @@ public class Student { // singleTorn
     public void setUserInformation() {
 
         try {
-            FileInputStream file = new FileInputStream("학생경력정보.xlsx");
+            FileInputStream file = new FileInputStream("/volume1/Tomcat/학생경력정보.xlsx");
             XSSFWorkbook workbook = new XSSFWorkbook(file);
 
             XSSFSheet sheet = workbook.getSheetAt(0);     // sheet index
@@ -67,6 +67,7 @@ public class Student { // singleTorn
                 if (row != null) {
                     XSSFCell cell = row.getCell(1);//학번 비교하기
                     String value = cell.getStringCellValue() + "";
+
                     if (value.equals(student_code)) {
                         XSSFCell num_cell = row.getCell(0);//몇번째 시트인지 찾기
                         String work_value = num_cell.getStringCellValue() + "";
